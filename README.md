@@ -14,11 +14,11 @@ mongotranslate --query="select ledgerBalance from account_balance where earmarkA
 
 ## Run /translate
 Use mongotranslate to translate SQL to MQL and use MongoTemplate to run aggregation. 
-URL: http://localhost:8080/translate
-Set Header: 
-- Content-Type : application/json
-- Accept : application/json
-Set Body: 
+- URL: http://localhost:8080/translate
+- Set Header: 
+   - Content-Type : application/json
+   - Accept : application/json
+- Set Body: 
 ```
 {
     "query" : "select ledgerBalance from account_balance where earmarkAmount >  5",
@@ -28,11 +28,11 @@ Set Body:
 
 ## Run /invokefindsortproject
 Use db.runCommand to execute find operation with filter MQL and sort / projection as optional.  
-URL: http://localhost:8080/invokefindsortproject
-Set Header: 
-- Content-Type : application/json
-- Accept : application/json
-Set Body: 
+- URL: http://localhost:8080/invokefindsortproject
+- Set Header: 
+   - Content-Type : application/json
+   - Accept : application/json
+- Set Body: 
 ```
 {
     "query" : "{ earmarkAmount : { $gt : 5}}",
@@ -44,11 +44,11 @@ Set Body:
 
 ## Run /invokefind
 Only use find operation to execute basic find MQL. 
-URL: http://localhost:8080/invokefind
-Set Header: 
-- Content-Type : application/json
-- Accept : application/json
-Set Body: 
+- URL: http://localhost:8080/invokefind
+- Set Header: 
+   - Content-Type : application/json
+   - Accept : application/json
+- Set Body: 
 ```
 {
     "query" : "{ _id : ObjectId('660feec3ef2d9b4d723a94c6')}",
@@ -58,11 +58,11 @@ Set Body:
 
 ## Run /invokeagg
 To db.runCommand to execute MQL using aggregation framework. 
-URL: http://localhost:8080/invokeagg
-Set Header: 
-- Content-Type : application/json
-- Accept : application/json
-Set Body: 
+- URL: http://localhost:8080/invokeagg
+- Set Header: 
+   - Content-Type : application/json
+   - Accept : application/json
+- Set Body: 
 ```
 {
     "query" : "select ledgerBalance from account_balance where earmarkAmount >  5",
