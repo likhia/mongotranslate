@@ -1,3 +1,7 @@
-com/translate/demo/controller/TranslateController.class
 com/translate/demo/DemoApplication.class
+com/translate/demo/data/InputData2.class
+com/translate/demo/controller/TranslateController.class
+com/translate/demo/config/DatabaseConfig.class
 com/translate/demo/data/InputData.class
+com/translate/demo/util/JsonAggregationOperation.class
+com/translate/demo/services/InvokeService.class

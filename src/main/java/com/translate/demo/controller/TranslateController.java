@@ -2,18 +2,20 @@ package com.translate.demo.controller;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.List;
 import java.util.StringTokenizer;
 
+import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
-import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.translate.demo.data.InputData;
+import com.translate.demo.data.InputData2;
+import com.translate.demo.services.InvokeService;
 
 @RestController
 public class TranslateController {
@@ -21,15 +23,51 @@ public class TranslateController {
     @Autowired
     private ResourceLoader resourceLoader;
 
+    @Autowired
+    InvokeService service;
+
+
+    @PostMapping("/invokefindsortproject")
+    public List<Document> invokeFindSortProject(@RequestBody InputData2 inputData2) {
+
+        //System.out.println(inputData2.getQuery());
+
+        //System.out.println(inputData2.getCollectionName());
+
+        return service.invokeFindSortProject(inputData2.getQuery(), inputData2.getSort(), inputData2.getProjection(), inputData2.getCollectionName());
+    }
+
+
+    @PostMapping("/invokefind")
+    public List<Document> invokeFind(@RequestBody InputData2 inputData2) {
+
+        //System.out.println(inputData2.getQuery());
+
+        //System.out.println(inputData2.getCollectionName());
+
+        return service.invokeFind(inputData2.getQuery(), inputData2.getCollectionName());
+    }
+
+    @PostMapping("/invokeagg")
+    public List<Document> invokeAgg(@RequestBody InputData inputData) {
+        String convertedMQL = convertSQLtoMQL(inputData);
+
+        System.out.println(convertedMQL);
+        
+        return service.invokeAggregation(convertedMQL, "account_balance");
+        
+    }
+
 
     @PostMapping("/translate")
-    public String translate(@RequestBody InputData inputData) {
+    public List<Document> translate(@RequestBody InputData inputData) {
+        //System.out.println(inputData.getQuery());
+        //System.out.println(inputData.getDbName());
 
-        System.out.println(inputData.getQuery());
-
-        System.out.println(inputData.getDbName());
-
-        return convertSQLtoMQL(inputData);
+        String convertedMQL = convertSQLtoMQL(inputData);
+        System.out.println(convertedMQL);
+        
+        return service.invoke(convertedMQL);
     }
 
     private String convertSQLtoMQL(InputData inputdata) {
@@ -90,4 +128,6 @@ public class TranslateController {
         }
         return mql.toString();
     }
+
+    
 }

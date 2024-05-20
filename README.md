@@ -12,8 +12,53 @@ Put the generated drdl in the `resources` folder of this project.
 mongotranslate --query="select ledgerBalance from account_balance where earmarkAmount >  5" --schema="schema.drdl" --dbName=myDatabase
 ```
 
-## run this code
+## Run /translate
+Use mongotranslate to translate SQL to MQL and use MongoTemplate to run aggregation. 
 URL: http://localhost:8080/translate
+Set Header: 
+- Content-Type : application/json
+- Accept : application/json
+Set Body: 
+```
+{
+    "query" : "select ledgerBalance from account_balance where earmarkAmount >  5",
+    "dbName": "myDatabase"
+}
+```
+
+## Run /invokefindsortproject
+Use db.runCommand to execute find operation with filter MQL and sort / projection as optional.  
+URL: http://localhost:8080/invokefindsortproject
+Set Header: 
+- Content-Type : application/json
+- Accept : application/json
+Set Body: 
+```
+{
+    "query" : "{ earmarkAmount : { $gt : 5}}",
+    "sort" : "{ earmarkAmount : -1}",
+    "projection" : "{ accountNumber : 1, productCode : 1, earmarkAmount : 1, _id : 0}",
+    "collectionName": "account_balance"
+}
+```
+
+## Run /invokefind
+Only use find operation to execute basic find MQL. 
+URL: http://localhost:8080/invokefind
+Set Header: 
+- Content-Type : application/json
+- Accept : application/json
+Set Body: 
+```
+{
+    "query" : "{ _id : ObjectId('660feec3ef2d9b4d723a94c6')}",
+    "collectionName": "account_balance"
+}
+```
+
+## Run /invokeagg
+To db.runCommand to execute MQL using aggregation framework. 
+URL: http://localhost:8080/invokeagg
 Set Header: 
 - Content-Type : application/json
 - Accept : application/json
