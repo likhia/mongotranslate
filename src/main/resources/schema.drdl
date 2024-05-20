@@ -1,0 +1,195 @@
+schema:
+- db: myDatabase
+  tables:
+  - table: account_balance
+    collection: account_balance
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: _class
+      MongoType: string
+      SqlName: _class
+      SqlType: varchar
+    - Name: accountMetadata.type
+      MongoType: string
+      SqlName: accountMetadata.type
+      SqlType: varchar
+    - Name: accountNumber
+      MongoType: string
+      SqlName: accountNumber
+      SqlType: varchar
+    - Name: createdAt
+      MongoType: date
+      SqlName: createdAt
+      SqlType: timestamp
+    - Name: currencyCode
+      MongoType: string
+      SqlName: currencyCode
+      SqlType: varchar
+    - Name: earmarkAmount
+      MongoType: float64
+      SqlName: earmarkAmount
+      SqlType: float
+    - Name: lastUpdatedChannelId
+      MongoType: string
+      SqlName: lastUpdatedChannelId
+      SqlType: varchar
+    - Name: lastUpdatedRequestId
+      MongoType: string
+      SqlName: lastUpdatedRequestId
+      SqlType: varchar
+    - Name: ledgerBalance
+      MongoType: float64
+      SqlName: ledgerBalance
+      SqlType: float
+    - Name: productCode
+      MongoType: string
+      SqlName: productCode
+      SqlType: varchar
+    - Name: updatedAt
+      MongoType: date
+      SqlName: updatedAt
+      SqlType: timestamp
+    - Name: version
+      MongoType: int
+      SqlName: version
+      SqlType: int
+  - table: event_log
+    collection: event_log
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: _class
+      MongoType: string
+      SqlName: _class
+      SqlType: varchar
+    - Name: accountNumber
+      MongoType: string
+      SqlName: accountNumber
+      SqlType: varchar
+    - Name: channelId
+      MongoType: string
+      SqlName: channelId
+      SqlType: varchar
+    - Name: createdAt
+      MongoType: date
+      SqlName: createdAt
+      SqlType: timestamp
+    - Name: eventType
+      MongoType: string
+      SqlName: eventType
+      SqlType: varchar
+    - Name: payload.accountNumber
+      MongoType: string
+      SqlName: payload.accountNumber
+      SqlType: varchar
+    - Name: payload.amount
+      MongoType: string
+      SqlName: payload.amount
+      SqlType: varchar
+    - Name: payload.period
+      MongoType: int
+      SqlName: payload.period
+      SqlType: int
+    - Name: payload.productCode
+      MongoType: string
+      SqlName: payload.productCode
+      SqlType: varchar
+    - Name: productCode
+      MongoType: string
+      SqlName: productCode
+      SqlType: varchar
+    - Name: requestId
+      MongoType: string
+      SqlName: requestId
+      SqlType: varchar
+    - Name: status
+      MongoType: string
+      SqlName: status
+      SqlType: varchar
+    - Name: updatedDt
+      MongoType: date
+      SqlName: updatedDt
+      SqlType: timestamp
+  - table: transaction_queue
+    collection: transaction_queue
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: _class
+      MongoType: string
+      SqlName: _class
+      SqlType: varchar
+    - Name: accountNumber
+      MongoType: string
+      SqlName: accountNumber
+      SqlType: varchar
+    - Name: channelId
+      MongoType: string
+      SqlName: channelId
+      SqlType: varchar
+    - Name: channelSentTs
+      MongoType: date
+      SqlName: channelSentTs
+      SqlType: timestamp
+    - Name: countryCode
+      MongoType: string
+      SqlName: countryCode
+      SqlType: varchar
+    - Name: createdAt
+      MongoType: date
+      SqlName: createdAt
+      SqlType: timestamp
+    - Name: errorMessage
+      MongoType: string
+      SqlName: errorMessage
+      SqlType: varchar
+    - Name: payload.accountNumber
+      MongoType: string
+      SqlName: payload.accountNumber
+      SqlType: varchar
+    - Name: payload.amount
+      MongoType: string
+      SqlName: payload.amount
+      SqlType: varchar
+    - Name: payload.period
+      MongoType: int
+      SqlName: payload.period
+      SqlType: int
+    - Name: payload.productCode
+      MongoType: string
+      SqlName: payload.productCode
+      SqlType: varchar
+    - Name: productCode
+      MongoType: string
+      SqlName: productCode
+      SqlType: varchar
+    - Name: requestId
+      MongoType: string
+      SqlName: requestId
+      SqlType: varchar
+    - Name: requestType
+      MongoType: string
+      SqlName: requestType
+      SqlType: varchar
+    - Name: sync_status
+      MongoType: string
+      SqlName: sync_status
+      SqlType: varchar
+    - Name: transactionStatus
+      MongoType: string
+      SqlName: transactionStatus
+      SqlType: varchar
+    - Name: updatedAt
+      MongoType: date
+      SqlName: updatedAt
+      SqlType: timestamp
