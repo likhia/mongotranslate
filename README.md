@@ -5,6 +5,7 @@
 ```
 mongodrdl --uri "mongodb://<username>:<password>@localhost:27011,localhost:27012,localhost:27013/<database name>?authSource=admin" --out "<name>.drdl"
 ```
+Put the generated drdl in the `resources` folder of this project. 
 
 - Step 3 to use Mongotranslate to translate SQL to MQL : https://www.mongodb.com/docs/bi-connector/current/reference/mongotranslate/
 ```
