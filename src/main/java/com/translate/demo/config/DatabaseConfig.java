@@ -48,7 +48,7 @@ public class DatabaseConfig extends AbstractMongoClientConfiguration {
           .applyConnectionString(connectionString)
           .applyToConnectionPoolSettings(builder ->  {builder.minSize(150); builder.maxSize(200);} )
           .writeConcern(WriteConcern.MAJORITY)
-          .readConcern(ReadConcern.SNAPSHOT)
+          .readConcern(ReadConcern.MAJORITY)
           .build();
 
         mongoClient = MongoClients.create(mongoClientSettings);

@@ -3,6 +3,8 @@ package com.translate.demo.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.bson.BsonDocument;
 import org.bson.Document;
@@ -30,15 +32,32 @@ public class InvokeService {
     @Autowired
     MongoClient client; 
 
+    private String datePattern = "\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}";
+    
+
+    
     /**
      * Using MongoTemplate to run aggregation. 
      * From https://rajatgl17.github.io/blog/2020/06/24/complex-aggregation-operation-mongo-java.html
      * 
      * @param mqlStr  Converted MQL from the mongotranslate
      */
-    public List<Document> invoke(String mqlStr) {
+    public List<Document> invoke(String mqlStr, String collectionName) {
         mqlStr = " { \"pipeline\" : " + mqlStr + " }";
-        System.out.println(mqlStr);
+        
+        Pattern p = Pattern.compile(datePattern);  // insert your pattern here
+        Matcher m = p.matcher(mqlStr);
+        
+        while (m.find()) {
+            int start = m.start();
+            int end = m.end();
+            
+            String newDate = mqlStr.substring(start, end) + "Z";
+
+            mqlStr = mqlStr.substring(0, start) + newDate + mqlStr.substring(end);
+        }
+
+        System.out.println(mqlStr);   
 
         Document doc = Document.parse(mqlStr);
     
@@ -51,7 +70,7 @@ public class InvokeService {
         }
       
         Aggregation aggregation =  Aggregation.newAggregation(aggOps);
-        AggregationResults result = template.aggregate(aggregation, "account_balance", Document.class);
+        AggregationResults result = template.aggregate(aggregation, collectionName, Document.class);
 
         if(result != null) {
             List<Document> mapResult = result.getMappedResults();
@@ -129,7 +148,18 @@ public class InvokeService {
      * @param queryStr Converted MQL from the mongotranslate
      * @param collectionName collection name to execute this MQL.
      */
-    public List<Document> invokeAggregation(String queryStr, String collectionName) {
+    public List<Document> invokeAggregation(String queryStr, String dbName, String collectionName) {
+        
+        Pattern p = Pattern.compile(datePattern);  // insert your pattern here
+        Matcher m = p.matcher(queryStr);
+        
+        while (m.find()) {
+            int start = m.start();
+            int end = m.end();
+            String newDate = queryStr.substring(start, end) + "Z";
+            queryStr = queryStr.substring(0, start) + newDate + queryStr.substring(end);
+        }
+
         StringBuffer commandBuffer = new StringBuffer("{ \"aggregate\":  \"" + collectionName + "\",");
         commandBuffer.append(" \"pipeline\" : " + queryStr + " ,\n");
         commandBuffer.append(" \"cursor\" : {} ");
@@ -139,7 +169,7 @@ public class InvokeService {
 
     
         BsonDocument bson = BsonDocument.parse(commandBuffer.toString());
-        MongoDatabase db = client.getDatabase("myDatabase");
+        MongoDatabase db = client.getDatabase(dbName);
         Document doc  = db.runCommand(bson);
 
         System.out.println("===================== Output =============================");

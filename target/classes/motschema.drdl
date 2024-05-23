@@ -1,0 +1,51 @@
+schema:
+- db: MOT
+  tables:
+  - table: reporting_ada_risk_return_summary
+    collection: reporting_ada_risk_return_summary
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: borr_count_ind
+      MongoType: string
+      SqlName: borr_count_ind
+      SqlType: varchar
+    - Name: business_dt
+      MongoType: date
+      SqlName: business_dt
+      SqlType: timestamp
+    - Name: country
+      MongoType: string
+      SqlName: country
+      SqlType: varchar
+    - Name: gcin
+      MongoType: string
+      SqlName: gcin
+      SqlType: varchar
+    - Name: gicindustry
+      MongoType: string
+      SqlName: gicindustry
+      SqlType: varchar
+    - Name: gicsubindustry
+      MongoType: string
+      SqlName: gicsubindustry
+      SqlType: varchar
+    - Name: gpin
+      MongoType: string
+      SqlName: gpin
+      SqlType: varchar
+    - Name: link_type
+      MongoType: string
+      SqlName: link_type
+      SqlType: varchar
+    - Name: revenue_sgd_sum_12m
+      MongoType: string
+      SqlName: revenue_sgd_sum_12m
+      SqlType: varchar
+    - Name: segmentdesc
+      MongoType: string
+      SqlName: segmentdesc
+      SqlType: varchar

@@ -54,7 +54,7 @@ public class TranslateController {
 
         System.out.println(convertedMQL);
         
-        return service.invokeAggregation(convertedMQL, "account_balance");
+        return service.invokeAggregation(convertedMQL, inputData.getDbName(),inputData.getCollectionName());
         
     }
 
@@ -67,14 +67,20 @@ public class TranslateController {
         String convertedMQL = convertSQLtoMQL(inputData);
         System.out.println(convertedMQL);
         
-        return service.invoke(convertedMQL);
+        return service.invoke(convertedMQL, inputData.getCollectionName());
     }
 
     private String convertSQLtoMQL(InputData inputdata) {
         StringBuffer mql = new StringBuffer(); 
+        String filename = "schema.drdl";
+
+        if(inputdata.getDbName().equals("MOT")) {
+            filename = "motschema.drdl";
+        }
 
         try {
-            Resource resource = resourceLoader.getResource("classpath:schema.drdl");
+
+            Resource resource = resourceLoader.getResource("classpath:" + filename);
             String filePath = resource.getFile().getAbsolutePath();
 	
             //String filePath = "/Users/jasmine.lim/dbs/mot/demo/src/main/resources/schema.drdl";

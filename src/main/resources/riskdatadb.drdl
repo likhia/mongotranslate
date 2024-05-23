@@ -1,0 +1,3707 @@
+schema:
+- db: riskdatadb
+  tables:
+  - table: ccodFx
+    collection: ccodFx
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: budgetFx
+      MongoType: float64
+      SqlName: budgetFx
+      SqlType: float
+    - Name: businessdate
+      MongoType: date
+      SqlName: businessdate
+      SqlType: timestamp
+    - Name: fromCcy
+      MongoType: string
+      SqlName: fromCcy
+      SqlType: varchar
+    - Name: notionalFx
+      MongoType: float64
+      SqlName: notionalFx
+      SqlType: float
+    - Name: timekey
+      MongoType: date
+      SqlName: timekey
+      SqlType: timestamp
+    - Name: toCcy
+      MongoType: string
+      SqlName: toCcy
+      SqlType: varchar
+  - table: ccodPortfolio
+    collection: ccodPortfolio
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: annualisedNsp
+      MongoType: float64
+      SqlName: annualisedNsp
+      SqlType: float
+    - Name: anr
+      MongoType: float64
+      SqlName: anr
+      SqlType: float
+    - Name: anrAnl
+      MongoType: float64
+      SqlName: anrAnl
+      SqlType: float
+    - Name: budgetFx
+      MongoType: float64
+      SqlName: budgetFx
+      SqlType: float
+    - Name: businessdate
+      MongoType: date
+      SqlName: businessdate
+      SqlType: timestamp
+    - Name: cncd_30Me
+      MongoType: float64
+      SqlName: cncd_30Me
+      SqlType: float
+    - Name: cncd_30Soc
+      MongoType: float64
+      SqlName: cncd_30Soc
+      SqlType: float
+    - Name: cncd_60Me
+      MongoType: float64
+      SqlName: cncd_60Me
+      SqlType: float
+    - Name: cncd_60Soc
+      MongoType: float64
+      SqlName: cncd_60Soc
+      SqlType: float
+    - Name: cncd_90Me
+      MongoType: float64
+      SqlName: cncd_90Me
+      SqlType: float
+    - Name: cncd_90Soc
+      MongoType: float64
+      SqlName: cncd_90Soc
+      SqlType: float
+    - Name: commissionPaid
+      MongoType: float64
+      SqlName: commissionPaid
+      SqlType: float
+    - Name: committedUndrawn
+      MongoType: float64
+      SqlName: committedUndrawn
+      SqlType: float
+    - Name: contractualCo
+      MongoType: float64
+      SqlName: contractualCo
+      SqlType: float
+    - Name: countryCd
+      MongoType: string
+      SqlName: countryCd
+      SqlType: varchar
+    - Name: curDpdFlowRateEnr
+      MongoType: string
+      SqlName: curDpdFlowRateEnr
+      SqlType: varchar
+    - Name: curDpdFlowRateSocEnr
+      MongoType: string
+      SqlName: curDpdFlowRateSocEnr
+      SqlType: varchar
+    - Name: curDpdLagPerMe
+      MongoType: string
+      SqlName: curDpdLagPerMe
+      SqlType: varchar
+    - Name: curDpdLagPerSoc
+      MongoType: string
+      SqlName: curDpdLagPerSoc
+      SqlType: varchar
+    - Name: curDpdPrvEnr
+      MongoType: string
+      SqlName: curDpdPrvEnr
+      SqlType: varchar
+    - Name: curDpdPrvSocEnr
+      MongoType: string
+      SqlName: curDpdPrvSocEnr
+      SqlType: varchar
+    - Name: curDpdSocEnr
+      MongoType: float64
+      SqlName: curDpdSocEnr
+      SqlType: float
+    - Name: curDpdTotalEnrLag
+      MongoType: string
+      SqlName: curDpdTotalEnrLag
+      SqlType: varchar
+    - Name: current
+      MongoType: float64
+      SqlName: current
+      SqlType: float
+    - Name: days_120
+      MongoType: float64
+      SqlName: days_120
+      SqlType: float
+    - Name: days_150
+      MongoType: float64
+      SqlName: days_150
+      SqlType: float
+    - Name: days_180Plus
+      MongoType: float64
+      SqlName: days_180Plus
+      SqlType: float
+    - Name: days_30
+      MongoType: float64
+      SqlName: days_30
+      SqlType: float
+    - Name: days_60
+      MongoType: float64
+      SqlName: days_60
+      SqlType: float
+    - Name: days_90
+      MongoType: float64
+      SqlName: days_90
+      SqlType: float
+    - Name: daysX
+      MongoType: float64
+      SqlName: daysX
+      SqlType: float
+    - Name: dpd_120FlowRateEnr
+      MongoType: float64
+      SqlName: dpd_120FlowRateEnr
+      SqlType: float
+    - Name: dpd_120FlowRateSocEnr
+      MongoType: float64
+      SqlName: dpd_120FlowRateSocEnr
+      SqlType: float
+    - Name: dpd_120LagPerMe
+      MongoType: float64
+      SqlName: dpd_120LagPerMe
+      SqlType: float
+    - Name: dpd_120LagPerSoc
+      MongoType: float64
+      SqlName: dpd_120LagPerSoc
+      SqlType: float
+    - Name: dpd_120MeNoOfAccts
+      MongoType: float64
+      SqlName: dpd_120MeNoOfAccts
+      SqlType: float
+    - Name: dpd_120OsBal
+      MongoType: float64
+      SqlName: dpd_120OsBal
+      SqlType: float
+    - Name: dpd_120PrvEnr
+      MongoType: float64
+      SqlName: dpd_120PrvEnr
+      SqlType: float
+    - Name: dpd_120PrvSocEnr
+      MongoType: float64
+      SqlName: dpd_120PrvSocEnr
+      SqlType: float
+    - Name: dpd_120SocEnr
+      MongoType: float64
+      SqlName: dpd_120SocEnr
+      SqlType: float
+    - Name: dpd_120SocNoOfAccts
+      MongoType: float64
+      SqlName: dpd_120SocNoOfAccts
+      SqlType: float
+    - Name: dpd_120TotalEnrLag
+      MongoType: float64
+      SqlName: dpd_120TotalEnrLag
+      SqlType: float
+    - Name: dpd_150FlowRateEnr
+      MongoType: float64
+      SqlName: dpd_150FlowRateEnr
+      SqlType: float
+    - Name: dpd_150FlowRateSocEnr
+      MongoType: float64
+      SqlName: dpd_150FlowRateSocEnr
+      SqlType: float
+    - Name: dpd_150LagPerMe
+      MongoType: float64
+      SqlName: dpd_150LagPerMe
+      SqlType: float
+    - Name: dpd_150LagPerSoc
+      MongoType: float64
+      SqlName: dpd_150LagPerSoc
+      SqlType: float
+    - Name: dpd_150MeNoOfAccts
+      MongoType: float64
+      SqlName: dpd_150MeNoOfAccts
+      SqlType: float
+    - Name: dpd_150OsBal
+      MongoType: float64
+      SqlName: dpd_150OsBal
+      SqlType: float
+    - Name: dpd_150PrvEnr
+      MongoType: float64
+      SqlName: dpd_150PrvEnr
+      SqlType: float
+    - Name: dpd_150PrvSocEnr
+      MongoType: float64
+      SqlName: dpd_150PrvSocEnr
+      SqlType: float
+    - Name: dpd_150SocEnr
+      MongoType: float64
+      SqlName: dpd_150SocEnr
+      SqlType: float
+    - Name: dpd_150SocNoOfAccts
+      MongoType: float64
+      SqlName: dpd_150SocNoOfAccts
+      SqlType: float
+    - Name: dpd_150TotalEnrLag
+      MongoType: float64
+      SqlName: dpd_150TotalEnrLag
+      SqlType: float
+    - Name: dpd_180FlowRateEnr
+      MongoType: float64
+      SqlName: dpd_180FlowRateEnr
+      SqlType: float
+    - Name: dpd_180FlowRateSocEnr
+      MongoType: float64
+      SqlName: dpd_180FlowRateSocEnr
+      SqlType: float
+    - Name: dpd_180LagPerMe
+      MongoType: string
+      SqlName: dpd_180LagPerMe
+      SqlType: varchar
+    - Name: dpd_180LagPerSoc
+      MongoType: string
+      SqlName: dpd_180LagPerSoc
+      SqlType: varchar
+    - Name: dpd_180MeNoOfAccts
+      MongoType: float64
+      SqlName: dpd_180MeNoOfAccts
+      SqlType: float
+    - Name: dpd_180OsBal
+      MongoType: float64
+      SqlName: dpd_180OsBal
+      SqlType: float
+    - Name: dpd_180PrvEnr
+      MongoType: float64
+      SqlName: dpd_180PrvEnr
+      SqlType: float
+    - Name: dpd_180PrvSocEnr
+      MongoType: float64
+      SqlName: dpd_180PrvSocEnr
+      SqlType: float
+    - Name: dpd_180SocEnr
+      MongoType: float64
+      SqlName: dpd_180SocEnr
+      SqlType: float
+    - Name: dpd_180SocNoOfAccts
+      MongoType: float64
+      SqlName: dpd_180SocNoOfAccts
+      SqlType: float
+    - Name: dpd_180TotalEnrLag
+      MongoType: string
+      SqlName: dpd_180TotalEnrLag
+      SqlType: varchar
+    - Name: dpd_210PlusFlowRateEnr
+      MongoType: float64
+      SqlName: dpd_210PlusFlowRateEnr
+      SqlType: float
+    - Name: dpd_210PlusFlowRateSocEnr
+      MongoType: float64
+      SqlName: dpd_210PlusFlowRateSocEnr
+      SqlType: float
+    - Name: dpd_210PlusLagPerMe
+      MongoType: string
+      SqlName: dpd_210PlusLagPerMe
+      SqlType: varchar
+    - Name: dpd_210PlusLagPerSoc
+      MongoType: string
+      SqlName: dpd_210PlusLagPerSoc
+      SqlType: varchar
+    - Name: dpd_210PlusMeNoOfAccts
+      MongoType: float64
+      SqlName: dpd_210PlusMeNoOfAccts
+      SqlType: float
+    - Name: dpd_210PlusOsBal
+      MongoType: float64
+      SqlName: dpd_210PlusOsBal
+      SqlType: float
+    - Name: dpd_210PlusPrvEnr
+      MongoType: float64
+      SqlName: dpd_210PlusPrvEnr
+      SqlType: float
+    - Name: dpd_210PlusPrvSocEnr
+      MongoType: float64
+      SqlName: dpd_210PlusPrvSocEnr
+      SqlType: float
+    - Name: dpd_210PlusSocEnr
+      MongoType: float64
+      SqlName: dpd_210PlusSocEnr
+      SqlType: float
+    - Name: dpd_210PlusSocNoOfAccts
+      MongoType: float64
+      SqlName: dpd_210PlusSocNoOfAccts
+      SqlType: float
+    - Name: dpd_210PlusTotalEnrLag
+      MongoType: string
+      SqlName: dpd_210PlusTotalEnrLag
+      SqlType: varchar
+    - Name: dpd_30FlowRateEnr
+      MongoType: float64
+      SqlName: dpd_30FlowRateEnr
+      SqlType: float
+    - Name: dpd_30FlowRateSocEnr
+      MongoType: float64
+      SqlName: dpd_30FlowRateSocEnr
+      SqlType: float
+    - Name: dpd_30LagPerMe
+      MongoType: float64
+      SqlName: dpd_30LagPerMe
+      SqlType: float
+    - Name: dpd_30LagPerSoc
+      MongoType: float64
+      SqlName: dpd_30LagPerSoc
+      SqlType: float
+    - Name: dpd_30MeNoOfAccts
+      MongoType: float64
+      SqlName: dpd_30MeNoOfAccts
+      SqlType: float
+    - Name: dpd_30OsBal
+      MongoType: float64
+      SqlName: dpd_30OsBal
+      SqlType: float
+    - Name: dpd_30PrvEnr
+      MongoType: float64
+      SqlName: dpd_30PrvEnr
+      SqlType: float
+    - Name: dpd_30PrvSocEnr
+      MongoType: float64
+      SqlName: dpd_30PrvSocEnr
+      SqlType: float
+    - Name: dpd_30SocEnr
+      MongoType: float64
+      SqlName: dpd_30SocEnr
+      SqlType: float
+    - Name: dpd_30SocNoOfAccts
+      MongoType: float64
+      SqlName: dpd_30SocNoOfAccts
+      SqlType: float
+    - Name: dpd_30TotalEnrLag
+      MongoType: float64
+      SqlName: dpd_30TotalEnrLag
+      SqlType: float
+    - Name: dpd_60FlowRateEnr
+      MongoType: float64
+      SqlName: dpd_60FlowRateEnr
+      SqlType: float
+    - Name: dpd_60FlowRateSocEnr
+      MongoType: float64
+      SqlName: dpd_60FlowRateSocEnr
+      SqlType: float
+    - Name: dpd_60LagPerMe
+      MongoType: float64
+      SqlName: dpd_60LagPerMe
+      SqlType: float
+    - Name: dpd_60LagPerSoc
+      MongoType: float64
+      SqlName: dpd_60LagPerSoc
+      SqlType: float
+    - Name: dpd_60MeNoOfAccts
+      MongoType: float64
+      SqlName: dpd_60MeNoOfAccts
+      SqlType: float
+    - Name: dpd_60OsBal
+      MongoType: float64
+      SqlName: dpd_60OsBal
+      SqlType: float
+    - Name: dpd_60PrvEnr
+      MongoType: float64
+      SqlName: dpd_60PrvEnr
+      SqlType: float
+    - Name: dpd_60PrvSocEnr
+      MongoType: float64
+      SqlName: dpd_60PrvSocEnr
+      SqlType: float
+    - Name: dpd_60SocEnr
+      MongoType: float64
+      SqlName: dpd_60SocEnr
+      SqlType: float
+    - Name: dpd_60SocNoOfAccts
+      MongoType: float64
+      SqlName: dpd_60SocNoOfAccts
+      SqlType: float
+    - Name: dpd_60TotalEnrLag
+      MongoType: float64
+      SqlName: dpd_60TotalEnrLag
+      SqlType: float
+    - Name: dpd_90FlowRateEnr
+      MongoType: float64
+      SqlName: dpd_90FlowRateEnr
+      SqlType: float
+    - Name: dpd_90FlowRateSocEnr
+      MongoType: float64
+      SqlName: dpd_90FlowRateSocEnr
+      SqlType: float
+    - Name: dpd_90LagPerMe
+      MongoType: float64
+      SqlName: dpd_90LagPerMe
+      SqlType: float
+    - Name: dpd_90LagPerSoc
+      MongoType: float64
+      SqlName: dpd_90LagPerSoc
+      SqlType: float
+    - Name: dpd_90MeNoOfAccts
+      MongoType: float64
+      SqlName: dpd_90MeNoOfAccts
+      SqlType: float
+    - Name: dpd_90OsBal
+      MongoType: float64
+      SqlName: dpd_90OsBal
+      SqlType: float
+    - Name: dpd_90PrvEnr
+      MongoType: float64
+      SqlName: dpd_90PrvEnr
+      SqlType: float
+    - Name: dpd_90PrvSocEnr
+      MongoType: float64
+      SqlName: dpd_90PrvSocEnr
+      SqlType: float
+    - Name: dpd_90SocEnr
+      MongoType: float64
+      SqlName: dpd_90SocEnr
+      SqlType: float
+    - Name: dpd_90SocNoOfAccts
+      MongoType: float64
+      SqlName: dpd_90SocNoOfAccts
+      SqlType: float
+    - Name: dpd_90TotalEnrLag
+      MongoType: float64
+      SqlName: dpd_90TotalEnrLag
+      SqlType: float
+    - Name: dpdCurOsBal
+      MongoType: float64
+      SqlName: dpdCurOsBal
+      SqlType: float
+    - Name: dpdCurrentMeNoOfAccts
+      MongoType: float64
+      SqlName: dpdCurrentMeNoOfAccts
+      SqlType: float
+    - Name: dpdCurrentSocNoOfAccts
+      MongoType: float64
+      SqlName: dpdCurrentSocNoOfAccts
+      SqlType: float
+    - Name: dpdXFlowRateEnr
+      MongoType: float64
+      SqlName: dpdXFlowRateEnr
+      SqlType: float
+    - Name: dpdXFlowRateSocEnr
+      MongoType: float64
+      SqlName: dpdXFlowRateSocEnr
+      SqlType: float
+    - Name: dpdXLagPerMe
+      MongoType: float64
+      SqlName: dpdXLagPerMe
+      SqlType: float
+    - Name: dpdXLagPerSoc
+      MongoType: float64
+      SqlName: dpdXLagPerSoc
+      SqlType: float
+    - Name: dpdXMeNoOfAccts
+      MongoType: float64
+      SqlName: dpdXMeNoOfAccts
+      SqlType: float
+    - Name: dpdXOsBal
+      MongoType: float64
+      SqlName: dpdXOsBal
+      SqlType: float
+    - Name: dpdXPrvEnr
+      MongoType: float64
+      SqlName: dpdXPrvEnr
+      SqlType: float
+    - Name: dpdXPrvSocEnr
+      MongoType: float64
+      SqlName: dpdXPrvSocEnr
+      SqlType: float
+    - Name: dpdXSocEnr
+      MongoType: float64
+      SqlName: dpdXSocEnr
+      SqlType: float
+    - Name: dpdXSocNoOfAccts
+      MongoType: float64
+      SqlName: dpdXSocNoOfAccts
+      SqlType: float
+    - Name: dpdXTotalEnrLag
+      MongoType: float64
+      SqlName: dpdXTotalEnrLag
+      SqlType: float
+    - Name: enr
+      MongoType: float64
+      SqlName: enr
+      SqlType: float
+    - Name: exposureAmount
+      MongoType: float64
+      SqlName: exposureAmount
+      SqlType: float
+    - Name: fromCcy
+      MongoType: string
+      SqlName: fromCcy
+      SqlType: varchar
+    - Name: grossSpCharge
+      MongoType: float64
+      SqlName: grossSpCharge
+      SqlType: float
+    - Name: lag_30Me
+      MongoType: float64
+      SqlName: lag_30Me
+      SqlType: float
+    - Name: lag_30Soc
+      MongoType: float64
+      SqlName: lag_30Soc
+      SqlType: float
+    - Name: lag_60Me
+      MongoType: float64
+      SqlName: lag_60Me
+      SqlType: float
+    - Name: lag_60Soc
+      MongoType: float64
+      SqlName: lag_60Soc
+      SqlType: float
+    - Name: lag_90Me
+      MongoType: float64
+      SqlName: lag_90Me
+      SqlType: float
+    - Name: lag_90Soc
+      MongoType: float64
+      SqlName: lag_90Soc
+      SqlType: float
+    - Name: lastUpdateDate
+      MongoType: string
+      SqlName: lastUpdateDate
+      SqlType: varchar
+    - Name: localCcy
+      MongoType: string
+      SqlName: localCcy
+      SqlType: varchar
+    - Name: ncl
+      MongoType: float64
+      SqlName: ncl
+      SqlType: float
+    - Name: nclYtd
+      MongoType: float64
+      SqlName: nclYtd
+      SqlType: float
+    - Name: netRecovery
+      MongoType: float64
+      SqlName: netRecovery
+      SqlType: float
+    - Name: notionalFx
+      MongoType: float64
+      SqlName: notionalFx
+      SqlType: float
+    - Name: nplBalance
+      MongoType: float64
+      SqlName: nplBalance
+      SqlType: float
+    - Name: nsp
+      MongoType: float64
+      SqlName: nsp
+      SqlType: float
+    - Name: nspAnl
+      MongoType: float64
+      SqlName: nspAnl
+      SqlType: float
+    - Name: nspYtd
+      MongoType: float64
+      SqlName: nspYtd
+      SqlType: float
+    - Name: productCd
+      MongoType: string
+      SqlName: productCd
+      SqlType: varchar
+    - Name: productCdLv1
+      MongoType: string
+      SqlName: productCdLv1
+      SqlType: varchar
+    - Name: productCdLv2
+      MongoType: string
+      SqlName: productCdLv2
+      SqlType: varchar
+    - Name: productCdLv3
+      MongoType: string
+      SqlName: productCdLv3
+      SqlType: varchar
+    - Name: productCdLv4
+      MongoType: string
+      SqlName: productCdLv4
+      SqlType: varchar
+    - Name: productCdLv4Key
+      MongoType: string
+      SqlName: productCdLv4Key
+      SqlType: varchar
+    - Name: productType
+      MongoType: string
+      SqlName: productType
+      SqlType: varchar
+    - Name: recovery
+      MongoType: float64
+      SqlName: recovery
+      SqlType: float
+    - Name: recoveryYtd
+      MongoType: float64
+      SqlName: recoveryYtd
+      SqlType: float
+    - Name: socAif
+      MongoType: string
+      SqlName: socAif
+      SqlType: varchar
+    - Name: socEnr
+      MongoType: int64
+      SqlName: socEnr
+      SqlType: int
+    - Name: spBuildRelease
+      MongoType: float64
+      SqlName: spBuildRelease
+      SqlType: float
+    - Name: spBuildReleaseYtd
+      MongoType: float64
+      SqlName: spBuildReleaseYtd
+      SqlType: float
+    - Name: spCharge
+      MongoType: float64
+      SqlName: spCharge
+      SqlType: float
+    - Name: timekey
+      MongoType: date
+      SqlName: timekey
+      SqlType: timestamp
+    - Name: toCcy
+      MongoType: string
+      SqlName: toCcy
+      SqlType: varchar
+    - Name: totalCreditLimit
+      MongoType: float64
+      SqlName: totalCreditLimit
+      SqlType: float
+    - Name: totalDpd
+      MongoType: float64
+      SqlName: totalDpd
+      SqlType: float
+    - Name: totalSpBalance
+      MongoType: float64
+      SqlName: totalSpBalance
+      SqlType: float
+    - Name: type
+      MongoType: string
+      SqlName: type
+      SqlType: varchar
+    - Name: undisbursedAmount
+      MongoType: float64
+      SqlName: undisbursedAmount
+      SqlType: float
+    - Name: unusedLimit
+      MongoType: float64
+      SqlName: unusedLimit
+      SqlType: float
+    - Name: utilisationRate
+      MongoType: float64
+      SqlName: utilisationRate
+      SqlType: float
+    - Name: writeoff
+      MongoType: float64
+      SqlName: writeoff
+      SqlType: float
+    - Name: writeoffYtd
+      MongoType: float64
+      SqlName: writeoffYtd
+      SqlType: float
+  - table: ceic
+    collection: ceic
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: ceicId
+      MongoType: int64
+      SqlName: ceicId
+      SqlType: int
+    - Name: ceicName
+      MongoType: string
+      SqlName: ceicName
+      SqlType: varchar
+    - Name: classification
+      MongoType: string
+      SqlName: classification
+      SqlType: varchar
+    - Name: endDate
+      MongoType: date
+      SqlName: endDate
+      SqlType: timestamp
+    - Name: frequency
+      MongoType: string
+      SqlName: frequency
+      SqlType: varchar
+    - Name: indicator
+      MongoType: string
+      SqlName: indicator
+      SqlType: varchar
+    - Name: lastChange
+      MongoType: float64
+      SqlName: lastChange
+      SqlType: float
+    - Name: lastUpdatedTime
+      MongoType: string
+      SqlName: lastUpdatedTime
+      SqlType: varchar
+    - Name: lastValue
+      MongoType: float64
+      SqlName: lastValue
+      SqlType: float
+    - Name: measure
+      MongoType: string
+      SqlName: measure
+      SqlType: varchar
+    - Name: refreshedTime
+      MongoType: date
+      SqlName: refreshedTime
+      SqlType: timestamp
+    - Name: region
+      MongoType: string
+      SqlName: region
+      SqlType: varchar
+    - Name: seriesCode
+      MongoType: string
+      SqlName: seriesCode
+      SqlType: varchar
+    - Name: seriesId
+      MongoType: string
+      SqlName: seriesId
+      SqlType: varchar
+    - Name: source
+      MongoType: string
+      SqlName: source
+      SqlType: varchar
+    - Name: startDate
+      MongoType: date
+      SqlName: startDate
+      SqlType: timestamp
+    - Name: status
+      MongoType: string
+      SqlName: status
+      SqlType: varchar
+    - Name: unit
+      MongoType: string
+      SqlName: unit
+      SqlType: varchar
+  - table: ceicDetails
+    collection: ceicDetails
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: ceicDetailsId
+      MongoType: int64
+      SqlName: ceicDetailsId
+      SqlType: int
+    - Name: ceicName
+      MongoType: string
+      SqlName: ceicName
+      SqlType: varchar
+    - Name: date
+      MongoType: date
+      SqlName: date
+      SqlType: timestamp
+    - Name: rate
+      MongoType: float64
+      SqlName: rate
+      SqlType: float
+  - table: clarksonsIngestion
+    collection: clarksonsIngestion
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: createdDate
+      MongoType: date
+      SqlName: createdDate
+      SqlType: timestamp
+    - Name: date
+      MongoType: string
+      SqlName: date
+      SqlType: varchar
+    - Name: id
+      MongoType: int64
+      SqlName: id
+      SqlType: int
+    - Name: name
+      MongoType: string
+      SqlName: name
+      SqlType: varchar
+    - Name: seriesId
+      MongoType: string
+      SqlName: seriesId
+      SqlType: varchar
+    - Name: unit
+      MongoType: string
+      SqlName: unit
+      SqlType: varchar
+    - Name: value
+      MongoType: string
+      SqlName: value
+      SqlType: varchar
+  - table: crctBusinessOverview
+    collection: crctBusinessOverview
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: businessDt
+      MongoType: date
+      SqlName: businessDt
+      SqlType: timestamp
+    - Name: ecl
+      MongoType: float64
+      SqlName: ecl
+      SqlType: float
+    - Name: exposure
+      MongoType: float64
+      SqlName: exposure
+      SqlType: float
+    - Name: grossSpCharge
+      MongoType: float64
+      SqlName: grossSpCharge
+      SqlType: float
+    - Name: revenue_12m
+      MongoType: float64
+      SqlName: revenue_12m
+      SqlType: float
+    - Name: roe
+      MongoType: float64
+      SqlName: roe
+      SqlType: float
+  - table: crctBusinessOverviewByIndustryGroup
+    collection: crctBusinessOverviewByIndustryGroup
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: businessDt
+      MongoType: date
+      SqlName: businessDt
+      SqlType: timestamp
+    - Name: ecl
+      MongoType: float64
+      SqlName: ecl
+      SqlType: float
+    - Name: exposure
+      MongoType: float64
+      SqlName: exposure
+      SqlType: float
+    - Name: gicindustry
+      MongoType: string
+      SqlName: gicindustry
+      SqlType: varchar
+    - Name: grossSpCharge
+      MongoType: float64
+      SqlName: grossSpCharge
+      SqlType: float
+    - Name: limit
+      MongoType: float64
+      SqlName: limit
+      SqlType: float
+    - Name: residualMaturity
+      MongoType: float64
+      SqlName: residualMaturity
+      SqlType: float
+    - Name: revenue_12m
+      MongoType: float64
+      SqlName: revenue_12m
+      SqlType: float
+    - Name: roe
+      MongoType: float64
+      SqlName: roe
+      SqlType: float
+  - table: crctBusinessOverviewByLocation
+    collection: crctBusinessOverviewByLocation
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: businessDt
+      MongoType: date
+      SqlName: businessDt
+      SqlType: timestamp
+    - Name: country
+      MongoType: string
+      SqlName: country
+      SqlType: varchar
+    - Name: ecl
+      MongoType: float64
+      SqlName: ecl
+      SqlType: float
+    - Name: exposure
+      MongoType: float64
+      SqlName: exposure
+      SqlType: float
+    - Name: grossSpCharge
+      MongoType: float64
+      SqlName: grossSpCharge
+      SqlType: float
+    - Name: revenue_12m
+      MongoType: float64
+      SqlName: revenue_12m
+      SqlType: float
+    - Name: roe
+      MongoType: float64
+      SqlName: roe
+      SqlType: float
+  - table: crctBusinessOverviewBySegment
+    collection: crctBusinessOverviewBySegment
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: businessDt
+      MongoType: date
+      SqlName: businessDt
+      SqlType: timestamp
+    - Name: ecl
+      MongoType: float64
+      SqlName: ecl
+      SqlType: float
+    - Name: exposure
+      MongoType: float64
+      SqlName: exposure
+      SqlType: float
+    - Name: grossSpCharge
+      MongoType: float64
+      SqlName: grossSpCharge
+      SqlType: float
+    - Name: revenue_12m
+      MongoType: float64
+      SqlName: revenue_12m
+      SqlType: float
+    - Name: roe
+      MongoType: float64
+      SqlName: roe
+      SqlType: float
+    - Name: segmentdesc
+      MongoType: string
+      SqlName: segmentdesc
+      SqlType: varchar
+  - table: crctBusinessOverviewForSpChargeBps
+    collection: crctBusinessOverviewForSpChargeBps
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: businessDt
+      MongoType: date
+      SqlName: businessDt
+      SqlType: timestamp
+    - Name: grossSpChargeBps
+      MongoType: float64
+      SqlName: grossSpChargeBps
+      SqlType: float
+    - Name: netSpChargeBps
+      MongoType: float64
+      SqlName: netSpChargeBps
+      SqlType: float
+  - table: crctCrdiCeic
+    collection: crctCrdiCeic
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: businessdate
+      MongoType: string
+      SqlName: businessdate
+      SqlType: varchar
+    - Name: ceicId
+      MongoType: int
+      SqlName: ceicId
+      SqlType: int
+    - Name: ceicName
+      MongoType: string
+      SqlName: ceicName
+      SqlType: varchar
+    - Name: classification
+      MongoType: string
+      SqlName: classification
+      SqlType: varchar
+    - Name: edsfDataOriginCountry
+      MongoType: string
+      SqlName: edsfDataOriginCountry
+      SqlType: varchar
+    - Name: edsfDataUnit
+      MongoType: string
+      SqlName: edsfDataUnit
+      SqlType: varchar
+    - Name: endDate
+      MongoType: string
+      SqlName: endDate
+      SqlType: varchar
+    - Name: frequency
+      MongoType: string
+      SqlName: frequency
+      SqlType: varchar
+    - Name: indicator
+      MongoType: string
+      SqlName: indicator
+      SqlType: varchar
+    - Name: lastChange
+      MongoType: float64
+      SqlName: lastChange
+      SqlType: float
+    - Name: lastUpdatedTime
+      MongoType: string
+      SqlName: lastUpdatedTime
+      SqlType: varchar
+    - Name: lastValue
+      MongoType: float64
+      SqlName: lastValue
+      SqlType: float
+    - Name: measure
+      MongoType: string
+      SqlName: measure
+      SqlType: varchar
+    - Name: region
+      MongoType: string
+      SqlName: region
+      SqlType: varchar
+    - Name: seriesCode
+      MongoType: string
+      SqlName: seriesCode
+      SqlType: varchar
+    - Name: seriesId
+      MongoType: string
+      SqlName: seriesId
+      SqlType: varchar
+    - Name: source
+      MongoType: string
+      SqlName: source
+      SqlType: varchar
+    - Name: startDate
+      MongoType: string
+      SqlName: startDate
+      SqlType: varchar
+    - Name: status
+      MongoType: string
+      SqlName: status
+      SqlType: varchar
+    - Name: unit
+      MongoType: string
+      SqlName: unit
+      SqlType: varchar
+  - table: crctCrdiCeicDetails
+    collection: crctCrdiCeicDetails
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: businessdate
+      MongoType: string
+      SqlName: businessdate
+      SqlType: varchar
+    - Name: ceicDetailsId
+      MongoType: int
+      SqlName: ceicDetailsId
+      SqlType: int
+    - Name: ceicName
+      MongoType: string
+      SqlName: ceicName
+      SqlType: varchar
+    - Name: date
+      MongoType: date
+      SqlName: date
+      SqlType: timestamp
+    - Name: edsfDataOriginCountry
+      MongoType: string
+      SqlName: edsfDataOriginCountry
+      SqlType: varchar
+    - Name: edsfDataUnit
+      MongoType: string
+      SqlName: edsfDataUnit
+      SqlType: varchar
+    - Name: rate
+      MongoType: float64
+      SqlName: rate
+      SqlType: float
+  - table: crctGpinRalLimitExposure
+    collection: crctGpinRalLimitExposure
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: approvedRalSgd
+      MongoType: float64
+      SqlName: approvedRalSgd
+      SqlType: float
+    - Name: businessDt
+      MongoType: date
+      SqlName: businessDt
+      SqlType: timestamp
+    - Name: exposureSgd
+      MongoType: float64
+      SqlName: exposureSgd
+      SqlType: float
+    - Name: gpin
+      MongoType: string
+      SqlName: gpin
+      SqlType: varchar
+  - table: crctMevSectionIndicator
+    collection: crctMevSectionIndicator
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: businessdate
+      MongoType: date
+      SqlName: businessdate
+      SqlType: timestamp
+    - Name: ceicCurrRate
+      MongoType: string
+      SqlName: ceicCurrRate
+      SqlType: varchar
+    - Name: ceicCurrSignal
+      MongoType: string
+      SqlName: ceicCurrSignal
+      SqlType: varchar
+    - Name: ceicSignalRule
+      MongoType: string
+      SqlName: ceicSignalRule
+      SqlType: varchar
+    - Name: currUnit
+      MongoType: string
+      SqlName: currUnit
+      SqlType: varchar
+    - Name: dataDate
+      MongoType: date
+      SqlName: dataDate
+      SqlType: timestamp
+    - Name: edsfDataOriginCountry
+      MongoType: string
+      SqlName: edsfDataOriginCountry
+      SqlType: varchar
+    - Name: edsfDataUnit
+      MongoType: string
+      SqlName: edsfDataUnit
+      SqlType: varchar
+    - Name: indicator
+      MongoType: string
+      SqlName: indicator
+      SqlType: varchar
+    - Name: location
+      MongoType: string
+      SqlName: location
+      SqlType: varchar
+    - Name: metaDataId
+      MongoType: string
+      SqlName: metaDataId
+      SqlType: varchar
+    - Name: name
+      MongoType: string
+      SqlName: name
+      SqlType: varchar
+    - Name: riskIndicator
+      MongoType: string
+      SqlName: riskIndicator
+      SqlType: varchar
+    - Name: section
+      MongoType: string
+      SqlName: section
+      SqlType: varchar
+    - Name: sectionName
+      MongoType: string
+      SqlName: sectionName
+      SqlType: varchar
+    - Name: threshold
+      MongoType: string
+      SqlName: threshold
+      SqlType: varchar
+    - Name: type
+      MongoType: string
+      SqlName: type
+      SqlType: varchar
+  - table: crctPdAcrrIndustry
+    collection: crctPdAcrrIndustry
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: businessDt
+      MongoType: date
+      SqlName: businessDt
+      SqlType: timestamp
+    - Name: gicsubindustry
+      MongoType: string
+      SqlName: gicsubindustry
+      SqlType: varchar
+    - Name: weightedAcrrPd
+      MongoType: string
+      SqlName: weightedAcrrPd
+      SqlType: varchar
+    - Name: weightedAcrrPpd
+      MongoType: string
+      SqlName: weightedAcrrPpd
+      SqlType: varchar
+    - Name: weightedAvgPd
+      MongoType: float64
+      SqlName: weightedAvgPd
+      SqlType: float
+    - Name: weightedAvgPpd
+      MongoType: float64
+      SqlName: weightedAvgPpd
+      SqlType: float
+    - Name: weightedPd
+      MongoType: float64
+      SqlName: weightedPd
+      SqlType: float
+    - Name: weightedPpd
+      MongoType: float64
+      SqlName: weightedPpd
+      SqlType: float
+  - table: crctPdAcrrIndustryGroup
+    collection: crctPdAcrrIndustryGroup
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: businessDt
+      MongoType: date
+      SqlName: businessDt
+      SqlType: timestamp
+    - Name: gicindustry
+      MongoType: string
+      SqlName: gicindustry
+      SqlType: varchar
+    - Name: weightedAcrrPd
+      MongoType: string
+      SqlName: weightedAcrrPd
+      SqlType: varchar
+    - Name: weightedAcrrPpd
+      MongoType: string
+      SqlName: weightedAcrrPpd
+      SqlType: varchar
+    - Name: weightedAvgPd
+      MongoType: float64
+      SqlName: weightedAvgPd
+      SqlType: float
+    - Name: weightedAvgPpd
+      MongoType: float64
+      SqlName: weightedAvgPpd
+      SqlType: float
+    - Name: weightedPd
+      MongoType: float64
+      SqlName: weightedPd
+      SqlType: float
+    - Name: weightedPpd
+      MongoType: float64
+      SqlName: weightedPpd
+      SqlType: float
+  - table: crctRiskCtptyBase
+    collection: crctRiskCtptyBase
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: acrr
+      MongoType: string
+      SqlName: acrr
+      SqlType: varchar
+    - Name: acrrPd
+      MongoType: string
+      SqlName: acrrPd
+      SqlType: varchar
+    - Name: alertActionDt
+      MongoType: string
+      SqlName: alertActionDt
+      SqlType: varchar
+    - Name: alertIsValid
+      MongoType: string
+      SqlName: alertIsValid
+      SqlType: varchar
+    - Name: alertPickupDt
+      MongoType: string
+      SqlName: alertPickupDt
+      SqlType: varchar
+    - Name: alertTriggerDt
+      MongoType: string
+      SqlName: alertTriggerDt
+      SqlType: varchar
+    - Name: borrCountInd
+      MongoType: string
+      SqlName: borrCountInd
+      SqlType: varchar
+    - Name: businessDt
+      MongoType: date
+      SqlName: businessDt
+      SqlType: timestamp
+    - Name: clientProfileSegment
+      MongoType: string
+      SqlName: clientProfileSegment
+      SqlType: varchar
+    - Name: clientProfileSegmentDesc
+      MongoType: string
+      SqlName: clientProfileSegmentDesc
+      SqlType: varchar
+    - Name: countryOfIncorporation
+      MongoType: string
+      SqlName: countryOfIncorporation
+      SqlType: varchar
+    - Name: customerOwner
+      MongoType: string
+      SqlName: customerOwner
+      SqlType: varchar
+    - Name: doaInd
+      MongoType: string
+      SqlName: doaInd
+      SqlType: varchar
+    - Name: egInd
+      MongoType: string
+      SqlName: egInd
+      SqlType: varchar
+    - Name: gcin
+      MongoType: string
+      SqlName: gcin
+      SqlType: varchar
+    - Name: gcinName
+      MongoType: string
+      SqlName: gcinName
+      SqlType: varchar
+    - Name: gicindustry
+      MongoType: string
+      SqlName: gicindustry
+      SqlType: varchar
+    - Name: gicsubindustry
+      MongoType: string
+      SqlName: gicsubindustry
+      SqlType: varchar
+    - Name: globalIndustry
+      MongoType: string
+      SqlName: globalIndustry
+      SqlType: varchar
+    - Name: newWatchlist
+      MongoType: string
+      SqlName: newWatchlist
+      SqlType: varchar
+    - Name: nonBankLleInd
+      MongoType: int
+      SqlName: nonBankLleInd
+      SqlType: int
+    - Name: ratingScale
+      MongoType: string
+      SqlName: ratingScale
+      SqlType: varchar
+    - Name: segmentdesc
+      MongoType: string
+      SqlName: segmentdesc
+      SqlType: varchar
+    - Name: watchIndicator
+      MongoType: string
+      SqlName: watchIndicator
+      SqlType: varchar
+    - Name: watchlistStatus
+      MongoType: string
+      SqlName: watchlistStatus
+      SqlType: varchar
+  - table: crctRiskCtptyGcinGpin
+    collection: crctRiskCtptyGcinGpin
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: businessDt
+      MongoType: date
+      SqlName: businessDt
+      SqlType: timestamp
+    - Name: dcor
+      MongoType: string
+      SqlName: dcor
+      SqlType: varchar
+    - Name: gcin
+      MongoType: string
+      SqlName: gcin
+      SqlType: varchar
+    - Name: gcinName
+      MongoType: string
+      SqlName: gcinName
+      SqlType: varchar
+    - Name: gpin
+      MongoType: string
+      SqlName: gpin
+      SqlType: varchar
+    - Name: gpinCnt
+      MongoType: int
+      SqlName: gpinCnt
+      SqlType: int
+    - Name: gpinName
+      MongoType: string
+      SqlName: gpinName
+      SqlType: varchar
+    - Name: jvInd
+      MongoType: int
+      SqlName: jvInd
+      SqlType: int
+    - Name: linkType
+      MongoType: string
+      SqlName: linkType
+      SqlType: varchar
+  - table: crctRiskReturnSummary
+    collection: crctRiskReturnSummary
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: acrr
+      MongoType: string
+      SqlName: acrr
+      SqlType: varchar
+    - Name: acrrPrevMonth
+      MongoType: string
+      SqlName: acrrPrevMonth
+      SqlType: varchar
+    - Name: avgAssetBalSgd
+      MongoType: float64
+      SqlName: avgAssetBalSgd
+      SqlType: float
+    - Name: avgAssetBalSgdPrevMonth
+      MongoType: float64
+      SqlName: avgAssetBalSgdPrevMonth
+      SqlType: float
+    - Name: businessDt
+      MongoType: date
+      SqlName: businessDt
+      SqlType: timestamp
+    - Name: committedLimitSgd
+      MongoType: float64
+      SqlName: committedLimitSgd
+      SqlType: float
+    - Name: committedLimitSgdPrevMonth
+      MongoType: float64
+      SqlName: committedLimitSgdPrevMonth
+      SqlType: float
+    - Name: country
+      MongoType: string
+      SqlName: country
+      SqlType: varchar
+    - Name: countryEaMaSgd
+      MongoType: float64
+      SqlName: countryEaMaSgd
+      SqlType: float
+    - Name: countryEclLimitActivatedRatio
+      MongoType: float64
+      SqlName: countryEclLimitActivatedRatio
+      SqlType: float
+    - Name: countryEclLimitCntRatio
+      MongoType: float64
+      SqlName: countryEclLimitCntRatio
+      SqlType: float
+    - Name: countryEclSgd
+      MongoType: float64
+      SqlName: countryEclSgd
+      SqlType: float
+    - Name: countryExposureLimitActivatedRatio
+      MongoType: float64
+      SqlName: countryExposureLimitActivatedRatio
+      SqlType: float
+    - Name: countryExposureLimitCntRatio
+      MongoType: float64
+      SqlName: countryExposureLimitCntRatio
+      SqlType: float
+    - Name: countryExposureSgd
+      MongoType: float64
+      SqlName: countryExposureSgd
+      SqlType: float
+    - Name: countryLimitActivatedSgd
+      MongoType: float64
+      SqlName: countryLimitActivatedSgd
+      SqlType: float
+    - Name: countryLimitsCnt
+      MongoType: int64
+      SqlName: countryLimitsCnt
+      SqlType: int
+    - Name: countryRar_12mcSgd
+      MongoType: float64
+      SqlName: countryRar_12mcSgd
+      SqlType: float
+    - Name: countryResidualMaturity
+      MongoType: float64
+      SqlName: countryResidualMaturity
+      SqlType: float
+    - Name: countryRevenueSgdFeeSum_12m
+      MongoType: float64
+      SqlName: countryRevenueSgdFeeSum_12m
+      SqlType: float
+    - Name: countryRevenueSgdNonFeeSum_12m
+      MongoType: float64
+      SqlName: countryRevenueSgdNonFeeSum_12m
+      SqlType: float
+    - Name: countryRevenueSgdSum_12m
+      MongoType: float64
+      SqlName: countryRevenueSgdSum_12m
+      SqlType: float
+    - Name: countryRevenueSgdSum_12mLimitActivatedRatio
+      MongoType: float64
+      SqlName: countryRevenueSgdSum_12mLimitActivatedRatio
+      SqlType: float
+    - Name: countryRevenueSgdSum_12mLimitCntRatio
+      MongoType: float64
+      SqlName: countryRevenueSgdSum_12mLimitCntRatio
+      SqlType: float
+    - Name: countryRoe
+      MongoType: float64
+      SqlName: countryRoe
+      SqlType: float
+    - Name: eadSgd
+      MongoType: float64
+      SqlName: eadSgd
+      SqlType: float
+    - Name: eadSgdPrevMonth
+      MongoType: float64
+      SqlName: eadSgdPrevMonth
+      SqlType: float
+    - Name: eaMaSgd
+      MongoType: float64
+      SqlName: eaMaSgd
+      SqlType: float
+    - Name: eaMaSgdPrevMonth
+      MongoType: float64
+      SqlName: eaMaSgdPrevMonth
+      SqlType: float
+    - Name: eclSgd
+      MongoType: float64
+      SqlName: eclSgd
+      SqlType: float
+    - Name: eclSgdLastYear
+      MongoType: float64
+      SqlName: eclSgdLastYear
+      SqlType: float
+    - Name: eclSgdPrevMonth
+      MongoType: float64
+      SqlName: eclSgdPrevMonth
+      SqlType: float
+    - Name: exposureSgd
+      MongoType: float64
+      SqlName: exposureSgd
+      SqlType: float
+    - Name: exposureSgdAvg_12m
+      MongoType: float64
+      SqlName: exposureSgdAvg_12m
+      SqlType: float
+    - Name: exposureSgdLastYear
+      MongoType: float64
+      SqlName: exposureSgdLastYear
+      SqlType: float
+    - Name: exposureSgdPrevMonth
+      MongoType: float64
+      SqlName: exposureSgdPrevMonth
+      SqlType: float
+    - Name: gcin
+      MongoType: string
+      SqlName: gcin
+      SqlType: varchar
+    - Name: gicindustry
+      MongoType: string
+      SqlName: gicindustry
+      SqlType: varchar
+    - Name: gicsubindustry
+      MongoType: string
+      SqlName: gicsubindustry
+      SqlType: varchar
+    - Name: grossSpCharge
+      MongoType: float64
+      SqlName: grossSpCharge
+      SqlType: float
+    - Name: grossSpChargeLastYear
+      MongoType: float64
+      SqlName: grossSpChargeLastYear
+      SqlType: float
+    - Name: grossSpChargePrevMonth
+      MongoType: float64
+      SqlName: grossSpChargePrevMonth
+      SqlType: float
+    - Name: industryEaMaSgd
+      MongoType: float64
+      SqlName: industryEaMaSgd
+      SqlType: float
+    - Name: industryEclLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryEclLimitActivatedRatio
+      SqlType: float
+    - Name: industryEclLimitActivatedRatioRank
+      MongoType: int
+      SqlName: industryEclLimitActivatedRatioRank
+      SqlType: int
+    - Name: industryEclLimitCntRatio
+      MongoType: float64
+      SqlName: industryEclLimitCntRatio
+      SqlType: float
+    - Name: industryEclLimitCntRatioRank
+      MongoType: int
+      SqlName: industryEclLimitCntRatioRank
+      SqlType: int
+    - Name: industryEclSgd
+      MongoType: float64
+      SqlName: industryEclSgd
+      SqlType: float
+    - Name: industryExposureLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryExposureLimitActivatedRatio
+      SqlType: float
+    - Name: industryExposureLimitActivatedRatioRank
+      MongoType: int
+      SqlName: industryExposureLimitActivatedRatioRank
+      SqlType: int
+    - Name: industryExposureLimitCntRatio
+      MongoType: float64
+      SqlName: industryExposureLimitCntRatio
+      SqlType: float
+    - Name: industryExposureLimitCntRatioRank
+      MongoType: int
+      SqlName: industryExposureLimitCntRatioRank
+      SqlType: int
+    - Name: industryExposureSgd
+      MongoType: float64
+      SqlName: industryExposureSgd
+      SqlType: float
+    - Name: industryExposureSgdRank
+      MongoType: int
+      SqlName: industryExposureSgdRank
+      SqlType: int
+    - Name: industryGroupEaMaSgd
+      MongoType: float64
+      SqlName: industryGroupEaMaSgd
+      SqlType: float
+    - Name: industryGroupEclLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryGroupEclLimitActivatedRatio
+      SqlType: float
+    - Name: industryGroupEclLimitActivatedRatioRank
+      MongoType: string
+      SqlName: industryGroupEclLimitActivatedRatioRank
+      SqlType: varchar
+    - Name: industryGroupEclLimitCntRatio
+      MongoType: float64
+      SqlName: industryGroupEclLimitCntRatio
+      SqlType: float
+    - Name: industryGroupEclLimitCntRatioRank
+      MongoType: string
+      SqlName: industryGroupEclLimitCntRatioRank
+      SqlType: varchar
+    - Name: industryGroupEclSgd
+      MongoType: float64
+      SqlName: industryGroupEclSgd
+      SqlType: float
+    - Name: industryGroupExposureLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryGroupExposureLimitActivatedRatio
+      SqlType: float
+    - Name: industryGroupExposureLimitActivatedRatioRank
+      MongoType: string
+      SqlName: industryGroupExposureLimitActivatedRatioRank
+      SqlType: varchar
+    - Name: industryGroupExposureLimitCntRatio
+      MongoType: float64
+      SqlName: industryGroupExposureLimitCntRatio
+      SqlType: float
+    - Name: industryGroupExposureLimitCntRatioRank
+      MongoType: string
+      SqlName: industryGroupExposureLimitCntRatioRank
+      SqlType: varchar
+    - Name: industryGroupExposureSgd
+      MongoType: float64
+      SqlName: industryGroupExposureSgd
+      SqlType: float
+    - Name: industryGroupExposureSgdRank
+      MongoType: string
+      SqlName: industryGroupExposureSgdRank
+      SqlType: varchar
+    - Name: industryGroupLimitActivatedSgd
+      MongoType: float64
+      SqlName: industryGroupLimitActivatedSgd
+      SqlType: float
+    - Name: industryGroupLimitsCnt
+      MongoType: string
+      SqlName: industryGroupLimitsCnt
+      SqlType: varchar
+    - Name: industryGroupRar_12mcSgd
+      MongoType: float64
+      SqlName: industryGroupRar_12mcSgd
+      SqlType: float
+    - Name: industryGroupResidualMaturity
+      MongoType: float64
+      SqlName: industryGroupResidualMaturity
+      SqlType: float
+    - Name: industryGroupRevenueFlagSum_12m
+      MongoType: string
+      SqlName: industryGroupRevenueFlagSum_12m
+      SqlType: varchar
+    - Name: industryGroupRevenueSgdFeeSum_12m
+      MongoType: float64
+      SqlName: industryGroupRevenueSgdFeeSum_12m
+      SqlType: float
+    - Name: industryGroupRevenueSgdNonFeeSum_12m
+      MongoType: float64
+      SqlName: industryGroupRevenueSgdNonFeeSum_12m
+      SqlType: float
+    - Name: industryGroupRevenueSgdSum_12m
+      MongoType: float64
+      SqlName: industryGroupRevenueSgdSum_12m
+      SqlType: float
+    - Name: industryGroupRevenueSgdSum_12mLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryGroupRevenueSgdSum_12mLimitActivatedRatio
+      SqlType: float
+    - Name: industryGroupRevenueSgdSum_12mLimitCntRatio
+      MongoType: float64
+      SqlName: industryGroupRevenueSgdSum_12mLimitCntRatio
+      SqlType: float
+    - Name: industryGroupRevenueSgdSum_12mRank
+      MongoType: string
+      SqlName: industryGroupRevenueSgdSum_12mRank
+      SqlType: varchar
+    - Name: industryGroupRoe
+      MongoType: float64
+      SqlName: industryGroupRoe
+      SqlType: float
+    - Name: industryGroupRoeRank
+      MongoType: string
+      SqlName: industryGroupRoeRank
+      SqlType: varchar
+    - Name: industryLimitActivatedSgd
+      MongoType: float64
+      SqlName: industryLimitActivatedSgd
+      SqlType: float
+    - Name: industryLimitsCnt
+      MongoType: int64
+      SqlName: industryLimitsCnt
+      SqlType: int
+    - Name: industryRar_12mcSgd
+      MongoType: float64
+      SqlName: industryRar_12mcSgd
+      SqlType: float
+    - Name: industryResidualMaturity
+      MongoType: float64
+      SqlName: industryResidualMaturity
+      SqlType: float
+    - Name: industryRevenueFlagSum_12m
+      MongoType: int64
+      SqlName: industryRevenueFlagSum_12m
+      SqlType: int
+    - Name: industryRevenueSgdFeeSum_12m
+      MongoType: float64
+      SqlName: industryRevenueSgdFeeSum_12m
+      SqlType: float
+    - Name: industryRevenueSgdNonFeeSum_12m
+      MongoType: float64
+      SqlName: industryRevenueSgdNonFeeSum_12m
+      SqlType: float
+    - Name: industryRevenueSgdSum_12m
+      MongoType: float64
+      SqlName: industryRevenueSgdSum_12m
+      SqlType: float
+    - Name: industryRevenueSgdSum_12mLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryRevenueSgdSum_12mLimitActivatedRatio
+      SqlType: float
+    - Name: industryRevenueSgdSum_12mLimitCntRatio
+      MongoType: float64
+      SqlName: industryRevenueSgdSum_12mLimitCntRatio
+      SqlType: float
+    - Name: industryRevenueSgdSum_12mRank
+      MongoType: int
+      SqlName: industryRevenueSgdSum_12mRank
+      SqlType: int
+    - Name: industryRoe
+      MongoType: float64
+      SqlName: industryRoe
+      SqlType: float
+    - Name: industryRoeRank
+      MongoType: int
+      SqlName: industryRoeRank
+      SqlType: int
+    - Name: limitActivatedSgd
+      MongoType: float64
+      SqlName: limitActivatedSgd
+      SqlType: float
+    - Name: limitActivatedSgdPrevMonth
+      MongoType: float64
+      SqlName: limitActivatedSgdPrevMonth
+      SqlType: float
+    - Name: limitsCnt
+      MongoType: string
+      SqlName: limitsCnt
+      SqlType: varchar
+    - Name: limitsCntLastYear
+      MongoType: string
+      SqlName: limitsCntLastYear
+      SqlType: varchar
+    - Name: limitsCntPrevMonth
+      MongoType: string
+      SqlName: limitsCntPrevMonth
+      SqlType: varchar
+    - Name: netSpCharge
+      MongoType: float64
+      SqlName: netSpCharge
+      SqlType: float
+    - Name: netSpChargeLastYear
+      MongoType: float64
+      SqlName: netSpChargeLastYear
+      SqlType: float
+    - Name: netSpChargePrevMonth
+      MongoType: float64
+      SqlName: netSpChargePrevMonth
+      SqlType: float
+    - Name: niiSgd
+      MongoType: float64
+      SqlName: niiSgd
+      SqlType: float
+    - Name: niiSgdPrevMonth
+      MongoType: float64
+      SqlName: niiSgdPrevMonth
+      SqlType: float
+    - Name: outstandingSgd
+      MongoType: float64
+      SqlName: outstandingSgd
+      SqlType: float
+    - Name: outstandingSgdPrevMonth
+      MongoType: float64
+      SqlName: outstandingSgdPrevMonth
+      SqlType: float
+    - Name: rar_12mcSgd
+      MongoType: float64
+      SqlName: rar_12mcSgd
+      SqlType: float
+    - Name: rar_12mcSgdPrevMonth
+      MongoType: float64
+      SqlName: rar_12mcSgdPrevMonth
+      SqlType: float
+    - Name: residualMaturity
+      MongoType: float64
+      SqlName: residualMaturity
+      SqlType: float
+    - Name: residualMaturityPrevMonth
+      MongoType: float64
+      SqlName: residualMaturityPrevMonth
+      SqlType: float
+    - Name: revenueFlagSum_12m
+      MongoType: int64
+      SqlName: revenueFlagSum_12m
+      SqlType: int
+    - Name: revenueSgd
+      MongoType: float64
+      SqlName: revenueSgd
+      SqlType: float
+    - Name: revenueSgdFee
+      MongoType: float64
+      SqlName: revenueSgdFee
+      SqlType: float
+    - Name: revenueSgdFeeLastYear
+      MongoType: float64
+      SqlName: revenueSgdFeeLastYear
+      SqlType: float
+    - Name: revenueSgdFeePrevMonth
+      MongoType: float64
+      SqlName: revenueSgdFeePrevMonth
+      SqlType: float
+    - Name: revenueSgdFeeSum_12m
+      MongoType: float64
+      SqlName: revenueSgdFeeSum_12m
+      SqlType: float
+    - Name: revenueSgdLastYear
+      MongoType: float64
+      SqlName: revenueSgdLastYear
+      SqlType: float
+    - Name: revenueSgdNonFee
+      MongoType: float64
+      SqlName: revenueSgdNonFee
+      SqlType: float
+    - Name: revenueSgdNonFeeLastYear
+      MongoType: float64
+      SqlName: revenueSgdNonFeeLastYear
+      SqlType: float
+    - Name: revenueSgdNonFeePrevMonth
+      MongoType: float64
+      SqlName: revenueSgdNonFeePrevMonth
+      SqlType: float
+    - Name: revenueSgdNonFeeSum_12m
+      MongoType: float64
+      SqlName: revenueSgdNonFeeSum_12m
+      SqlType: float
+    - Name: revenueSgdPrevMonth
+      MongoType: float64
+      SqlName: revenueSgdPrevMonth
+      SqlType: float
+    - Name: revenueSgdSum_12m
+      MongoType: float64
+      SqlName: revenueSgdSum_12m
+      SqlType: float
+    - Name: rwaSgdCap
+      MongoType: float64
+      SqlName: rwaSgdCap
+      SqlType: float
+    - Name: rwaSgdCapAvg_12m
+      MongoType: float64
+      SqlName: rwaSgdCapAvg_12m
+      SqlType: float
+    - Name: rwaSgdCapPrevMonth
+      MongoType: float64
+      SqlName: rwaSgdCapPrevMonth
+      SqlType: float
+    - Name: securedExpSgd
+      MongoType: bson.Decimal128
+      SqlName: securedExpSgd
+      SqlType: decimal
+    - Name: securedExpSgdPrevMonth
+      MongoType: bson.Decimal128
+      SqlName: securedExpSgdPrevMonth
+      SqlType: decimal
+    - Name: segmentdesc
+      MongoType: string
+      SqlName: segmentdesc
+      SqlType: varchar
+    - Name: segmentEaMaSgd
+      MongoType: float64
+      SqlName: segmentEaMaSgd
+      SqlType: float
+    - Name: segmentEclLimitActivatedRatio
+      MongoType: float64
+      SqlName: segmentEclLimitActivatedRatio
+      SqlType: float
+    - Name: segmentEclLimitCntRatio
+      MongoType: float64
+      SqlName: segmentEclLimitCntRatio
+      SqlType: float
+    - Name: segmentEclSgd
+      MongoType: float64
+      SqlName: segmentEclSgd
+      SqlType: float
+    - Name: segmentExposureLimitActivatedRatio
+      MongoType: float64
+      SqlName: segmentExposureLimitActivatedRatio
+      SqlType: float
+    - Name: segmentExposureLimitCntRatio
+      MongoType: float64
+      SqlName: segmentExposureLimitCntRatio
+      SqlType: float
+    - Name: segmentExposureSgd
+      MongoType: float64
+      SqlName: segmentExposureSgd
+      SqlType: float
+    - Name: segmentLimitActivatedSgd
+      MongoType: float64
+      SqlName: segmentLimitActivatedSgd
+      SqlType: float
+    - Name: segmentLimitsCnt
+      MongoType: int64
+      SqlName: segmentLimitsCnt
+      SqlType: int
+    - Name: segmentRar_12mcSgd
+      MongoType: float64
+      SqlName: segmentRar_12mcSgd
+      SqlType: float
+    - Name: segmentResidualMaturity
+      MongoType: float64
+      SqlName: segmentResidualMaturity
+      SqlType: float
+    - Name: segmentRevenueSgdFeeSum_12m
+      MongoType: float64
+      SqlName: segmentRevenueSgdFeeSum_12m
+      SqlType: float
+    - Name: segmentRevenueSgdNonFeeSum_12m
+      MongoType: float64
+      SqlName: segmentRevenueSgdNonFeeSum_12m
+      SqlType: float
+    - Name: segmentRevenueSgdSum_12m
+      MongoType: float64
+      SqlName: segmentRevenueSgdSum_12m
+      SqlType: float
+    - Name: segmentRevenueSgdSum_12mLimitActivatedRatio
+      MongoType: float64
+      SqlName: segmentRevenueSgdSum_12mLimitActivatedRatio
+      SqlType: float
+    - Name: segmentRevenueSgdSum_12mLimitCntRatio
+      MongoType: float64
+      SqlName: segmentRevenueSgdSum_12mLimitCntRatio
+      SqlType: float
+    - Name: segmentRoe
+      MongoType: float64
+      SqlName: segmentRoe
+      SqlType: float
+    - Name: spBalSgd
+      MongoType: float64
+      SqlName: spBalSgd
+      SqlType: float
+    - Name: spBalSgdPrevMonth
+      MongoType: float64
+      SqlName: spBalSgdPrevMonth
+      SqlType: float
+    - Name: spChargeAnnualMth
+      MongoType: int
+      SqlName: spChargeAnnualMth
+      SqlType: int
+    - Name: uncommittedLimitSgd
+      MongoType: float64
+      SqlName: uncommittedLimitSgd
+      SqlType: float
+    - Name: uncommittedLimitSgdPrevMonth
+      MongoType: float64
+      SqlName: uncommittedLimitSgdPrevMonth
+      SqlType: float
+    - Name: uncommittedOutstandingSgd
+      MongoType: float64
+      SqlName: uncommittedOutstandingSgd
+      SqlType: float
+    - Name: uncommittedOutstandingSgdPrevMonth
+      MongoType: float64
+      SqlName: uncommittedOutstandingSgdPrevMonth
+      SqlType: float
+    - Name: unsecuredExpSgd
+      MongoType: bson.Decimal128
+      SqlName: unsecuredExpSgd
+      SqlType: decimal
+    - Name: unsecuredExpSgdPrevMonth
+      MongoType: bson.Decimal128
+      SqlName: unsecuredExpSgdPrevMonth
+      SqlType: decimal
+    - Name: watchlistStatus
+      MongoType: string
+      SqlName: watchlistStatus
+      SqlType: varchar
+    - Name: watchlistStatusPrevMonth
+      MongoType: string
+      SqlName: watchlistStatusPrevMonth
+      SqlType: varchar
+  - table: crctRiskReturnSummary_12m
+    collection: crctRiskReturnSummary_12m
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: acrr
+      MongoType: string
+      SqlName: acrr
+      SqlType: varchar
+    - Name: acrrPrevMonth
+      MongoType: string
+      SqlName: acrrPrevMonth
+      SqlType: varchar
+    - Name: avgAssetBalSgd
+      MongoType: float64
+      SqlName: avgAssetBalSgd
+      SqlType: float
+    - Name: avgAssetBalSgdPrevMonth
+      MongoType: float64
+      SqlName: avgAssetBalSgdPrevMonth
+      SqlType: float
+    - Name: businessDt
+      MongoType: date
+      SqlName: businessDt
+      SqlType: timestamp
+    - Name: committedLimitSgd
+      MongoType: float64
+      SqlName: committedLimitSgd
+      SqlType: float
+    - Name: committedLimitSgdPrevMonth
+      MongoType: float64
+      SqlName: committedLimitSgdPrevMonth
+      SqlType: float
+    - Name: country
+      MongoType: string
+      SqlName: country
+      SqlType: varchar
+    - Name: countryEaMaSgd
+      MongoType: float64
+      SqlName: countryEaMaSgd
+      SqlType: float
+    - Name: countryEclLimitActivatedRatio
+      MongoType: float64
+      SqlName: countryEclLimitActivatedRatio
+      SqlType: float
+    - Name: countryEclLimitCntRatio
+      MongoType: float64
+      SqlName: countryEclLimitCntRatio
+      SqlType: float
+    - Name: countryEclSgd
+      MongoType: float64
+      SqlName: countryEclSgd
+      SqlType: float
+    - Name: countryExposureLimitActivatedRatio
+      MongoType: float64
+      SqlName: countryExposureLimitActivatedRatio
+      SqlType: float
+    - Name: countryExposureLimitCntRatio
+      MongoType: float64
+      SqlName: countryExposureLimitCntRatio
+      SqlType: float
+    - Name: countryExposureSgd
+      MongoType: float64
+      SqlName: countryExposureSgd
+      SqlType: float
+    - Name: countryLimitActivatedSgd
+      MongoType: float64
+      SqlName: countryLimitActivatedSgd
+      SqlType: float
+    - Name: countryLimitsCnt
+      MongoType: int64
+      SqlName: countryLimitsCnt
+      SqlType: int
+    - Name: countryRar_12mcSgd
+      MongoType: float64
+      SqlName: countryRar_12mcSgd
+      SqlType: float
+    - Name: countryResidualMaturity
+      MongoType: float64
+      SqlName: countryResidualMaturity
+      SqlType: float
+    - Name: countryRevenueSgdFeeSum_12m
+      MongoType: float64
+      SqlName: countryRevenueSgdFeeSum_12m
+      SqlType: float
+    - Name: countryRevenueSgdNonFeeSum_12m
+      MongoType: float64
+      SqlName: countryRevenueSgdNonFeeSum_12m
+      SqlType: float
+    - Name: countryRevenueSgdSum_12m
+      MongoType: float64
+      SqlName: countryRevenueSgdSum_12m
+      SqlType: float
+    - Name: countryRevenueSgdSum_12mLimitActivatedRatio
+      MongoType: float64
+      SqlName: countryRevenueSgdSum_12mLimitActivatedRatio
+      SqlType: float
+    - Name: countryRevenueSgdSum_12mLimitCntRatio
+      MongoType: float64
+      SqlName: countryRevenueSgdSum_12mLimitCntRatio
+      SqlType: float
+    - Name: countryRoe
+      MongoType: float64
+      SqlName: countryRoe
+      SqlType: float
+    - Name: eadSgd
+      MongoType: float64
+      SqlName: eadSgd
+      SqlType: float
+    - Name: eadSgdPrevMonth
+      MongoType: float64
+      SqlName: eadSgdPrevMonth
+      SqlType: float
+    - Name: eaMaSgd
+      MongoType: float64
+      SqlName: eaMaSgd
+      SqlType: float
+    - Name: eaMaSgdPrevMonth
+      MongoType: float64
+      SqlName: eaMaSgdPrevMonth
+      SqlType: float
+    - Name: eclSgd
+      MongoType: float64
+      SqlName: eclSgd
+      SqlType: float
+    - Name: eclSgdLastYear
+      MongoType: float64
+      SqlName: eclSgdLastYear
+      SqlType: float
+    - Name: eclSgdPrevMonth
+      MongoType: float64
+      SqlName: eclSgdPrevMonth
+      SqlType: float
+    - Name: exposureSgd
+      MongoType: float64
+      SqlName: exposureSgd
+      SqlType: float
+    - Name: exposureSgdAvg_12m
+      MongoType: float64
+      SqlName: exposureSgdAvg_12m
+      SqlType: float
+    - Name: exposureSgdLastYear
+      MongoType: float64
+      SqlName: exposureSgdLastYear
+      SqlType: float
+    - Name: exposureSgdPrevMonth
+      MongoType: float64
+      SqlName: exposureSgdPrevMonth
+      SqlType: float
+    - Name: gcin
+      MongoType: string
+      SqlName: gcin
+      SqlType: varchar
+    - Name: gicindustry
+      MongoType: string
+      SqlName: gicindustry
+      SqlType: varchar
+    - Name: gicsubindustry
+      MongoType: string
+      SqlName: gicsubindustry
+      SqlType: varchar
+    - Name: grossSpCharge
+      MongoType: float64
+      SqlName: grossSpCharge
+      SqlType: float
+    - Name: grossSpChargeLastYear
+      MongoType: float64
+      SqlName: grossSpChargeLastYear
+      SqlType: float
+    - Name: grossSpChargePrevMonth
+      MongoType: float64
+      SqlName: grossSpChargePrevMonth
+      SqlType: float
+    - Name: industryEaMaSgd
+      MongoType: float64
+      SqlName: industryEaMaSgd
+      SqlType: float
+    - Name: industryEclLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryEclLimitActivatedRatio
+      SqlType: float
+    - Name: industryEclLimitActivatedRatioRank
+      MongoType: int
+      SqlName: industryEclLimitActivatedRatioRank
+      SqlType: int
+    - Name: industryEclLimitCntRatio
+      MongoType: float64
+      SqlName: industryEclLimitCntRatio
+      SqlType: float
+    - Name: industryEclLimitCntRatioRank
+      MongoType: int
+      SqlName: industryEclLimitCntRatioRank
+      SqlType: int
+    - Name: industryEclSgd
+      MongoType: float64
+      SqlName: industryEclSgd
+      SqlType: float
+    - Name: industryExposureLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryExposureLimitActivatedRatio
+      SqlType: float
+    - Name: industryExposureLimitActivatedRatioRank
+      MongoType: int
+      SqlName: industryExposureLimitActivatedRatioRank
+      SqlType: int
+    - Name: industryExposureLimitCntRatio
+      MongoType: float64
+      SqlName: industryExposureLimitCntRatio
+      SqlType: float
+    - Name: industryExposureLimitCntRatioRank
+      MongoType: int
+      SqlName: industryExposureLimitCntRatioRank
+      SqlType: int
+    - Name: industryExposureSgd
+      MongoType: float64
+      SqlName: industryExposureSgd
+      SqlType: float
+    - Name: industryExposureSgdRank
+      MongoType: int
+      SqlName: industryExposureSgdRank
+      SqlType: int
+    - Name: industryGroupEaMaSgd
+      MongoType: float64
+      SqlName: industryGroupEaMaSgd
+      SqlType: float
+    - Name: industryGroupEclLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryGroupEclLimitActivatedRatio
+      SqlType: float
+    - Name: industryGroupEclLimitActivatedRatioRank
+      MongoType: string
+      SqlName: industryGroupEclLimitActivatedRatioRank
+      SqlType: varchar
+    - Name: industryGroupEclLimitCntRatio
+      MongoType: float64
+      SqlName: industryGroupEclLimitCntRatio
+      SqlType: float
+    - Name: industryGroupEclLimitCntRatioRank
+      MongoType: string
+      SqlName: industryGroupEclLimitCntRatioRank
+      SqlType: varchar
+    - Name: industryGroupEclSgd
+      MongoType: float64
+      SqlName: industryGroupEclSgd
+      SqlType: float
+    - Name: industryGroupExposureLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryGroupExposureLimitActivatedRatio
+      SqlType: float
+    - Name: industryGroupExposureLimitActivatedRatioRank
+      MongoType: string
+      SqlName: industryGroupExposureLimitActivatedRatioRank
+      SqlType: varchar
+    - Name: industryGroupExposureLimitCntRatio
+      MongoType: float64
+      SqlName: industryGroupExposureLimitCntRatio
+      SqlType: float
+    - Name: industryGroupExposureLimitCntRatioRank
+      MongoType: string
+      SqlName: industryGroupExposureLimitCntRatioRank
+      SqlType: varchar
+    - Name: industryGroupExposureSgd
+      MongoType: float64
+      SqlName: industryGroupExposureSgd
+      SqlType: float
+    - Name: industryGroupExposureSgdRank
+      MongoType: string
+      SqlName: industryGroupExposureSgdRank
+      SqlType: varchar
+    - Name: industryGroupLimitActivatedSgd
+      MongoType: float64
+      SqlName: industryGroupLimitActivatedSgd
+      SqlType: float
+    - Name: industryGroupLimitsCnt
+      MongoType: string
+      SqlName: industryGroupLimitsCnt
+      SqlType: varchar
+    - Name: industryGroupRar_12mcSgd
+      MongoType: float64
+      SqlName: industryGroupRar_12mcSgd
+      SqlType: float
+    - Name: industryGroupResidualMaturity
+      MongoType: float64
+      SqlName: industryGroupResidualMaturity
+      SqlType: float
+    - Name: industryGroupRevenueFlagSum_12m
+      MongoType: string
+      SqlName: industryGroupRevenueFlagSum_12m
+      SqlType: varchar
+    - Name: industryGroupRevenueSgdFeeSum_12m
+      MongoType: float64
+      SqlName: industryGroupRevenueSgdFeeSum_12m
+      SqlType: float
+    - Name: industryGroupRevenueSgdNonFeeSum_12m
+      MongoType: float64
+      SqlName: industryGroupRevenueSgdNonFeeSum_12m
+      SqlType: float
+    - Name: industryGroupRevenueSgdSum_12m
+      MongoType: float64
+      SqlName: industryGroupRevenueSgdSum_12m
+      SqlType: float
+    - Name: industryGroupRevenueSgdSum_12mLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryGroupRevenueSgdSum_12mLimitActivatedRatio
+      SqlType: float
+    - Name: industryGroupRevenueSgdSum_12mLimitCntRatio
+      MongoType: float64
+      SqlName: industryGroupRevenueSgdSum_12mLimitCntRatio
+      SqlType: float
+    - Name: industryGroupRevenueSgdSum_12mRank
+      MongoType: string
+      SqlName: industryGroupRevenueSgdSum_12mRank
+      SqlType: varchar
+    - Name: industryGroupRoe
+      MongoType: float64
+      SqlName: industryGroupRoe
+      SqlType: float
+    - Name: industryGroupRoeRank
+      MongoType: string
+      SqlName: industryGroupRoeRank
+      SqlType: varchar
+    - Name: industryLimitActivatedSgd
+      MongoType: float64
+      SqlName: industryLimitActivatedSgd
+      SqlType: float
+    - Name: industryLimitsCnt
+      MongoType: int64
+      SqlName: industryLimitsCnt
+      SqlType: int
+    - Name: industryRar_12mcSgd
+      MongoType: float64
+      SqlName: industryRar_12mcSgd
+      SqlType: float
+    - Name: industryResidualMaturity
+      MongoType: float64
+      SqlName: industryResidualMaturity
+      SqlType: float
+    - Name: industryRevenueFlagSum_12m
+      MongoType: int64
+      SqlName: industryRevenueFlagSum_12m
+      SqlType: int
+    - Name: industryRevenueSgdFeeSum_12m
+      MongoType: float64
+      SqlName: industryRevenueSgdFeeSum_12m
+      SqlType: float
+    - Name: industryRevenueSgdNonFeeSum_12m
+      MongoType: float64
+      SqlName: industryRevenueSgdNonFeeSum_12m
+      SqlType: float
+    - Name: industryRevenueSgdSum_12m
+      MongoType: float64
+      SqlName: industryRevenueSgdSum_12m
+      SqlType: float
+    - Name: industryRevenueSgdSum_12mLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryRevenueSgdSum_12mLimitActivatedRatio
+      SqlType: float
+    - Name: industryRevenueSgdSum_12mLimitCntRatio
+      MongoType: float64
+      SqlName: industryRevenueSgdSum_12mLimitCntRatio
+      SqlType: float
+    - Name: industryRevenueSgdSum_12mRank
+      MongoType: int
+      SqlName: industryRevenueSgdSum_12mRank
+      SqlType: int
+    - Name: industryRoe
+      MongoType: float64
+      SqlName: industryRoe
+      SqlType: float
+    - Name: industryRoeRank
+      MongoType: int
+      SqlName: industryRoeRank
+      SqlType: int
+    - Name: limitActivatedSgd
+      MongoType: float64
+      SqlName: limitActivatedSgd
+      SqlType: float
+    - Name: limitActivatedSgdPrevMonth
+      MongoType: float64
+      SqlName: limitActivatedSgdPrevMonth
+      SqlType: float
+    - Name: limitsCnt
+      MongoType: string
+      SqlName: limitsCnt
+      SqlType: varchar
+    - Name: limitsCntLastYear
+      MongoType: string
+      SqlName: limitsCntLastYear
+      SqlType: varchar
+    - Name: limitsCntPrevMonth
+      MongoType: string
+      SqlName: limitsCntPrevMonth
+      SqlType: varchar
+    - Name: netSpCharge
+      MongoType: float64
+      SqlName: netSpCharge
+      SqlType: float
+    - Name: netSpChargeLastYear
+      MongoType: float64
+      SqlName: netSpChargeLastYear
+      SqlType: float
+    - Name: netSpChargePrevMonth
+      MongoType: float64
+      SqlName: netSpChargePrevMonth
+      SqlType: float
+    - Name: niiSgd
+      MongoType: float64
+      SqlName: niiSgd
+      SqlType: float
+    - Name: niiSgdPrevMonth
+      MongoType: float64
+      SqlName: niiSgdPrevMonth
+      SqlType: float
+    - Name: outstandingSgd
+      MongoType: float64
+      SqlName: outstandingSgd
+      SqlType: float
+    - Name: outstandingSgdPrevMonth
+      MongoType: float64
+      SqlName: outstandingSgdPrevMonth
+      SqlType: float
+    - Name: rar_12mcSgd
+      MongoType: float64
+      SqlName: rar_12mcSgd
+      SqlType: float
+    - Name: rar_12mcSgdPrevMonth
+      MongoType: float64
+      SqlName: rar_12mcSgdPrevMonth
+      SqlType: float
+    - Name: residualMaturity
+      MongoType: float64
+      SqlName: residualMaturity
+      SqlType: float
+    - Name: residualMaturityPrevMonth
+      MongoType: float64
+      SqlName: residualMaturityPrevMonth
+      SqlType: float
+    - Name: revenueFlagSum_12m
+      MongoType: int64
+      SqlName: revenueFlagSum_12m
+      SqlType: int
+    - Name: revenueSgd
+      MongoType: float64
+      SqlName: revenueSgd
+      SqlType: float
+    - Name: revenueSgdFee
+      MongoType: float64
+      SqlName: revenueSgdFee
+      SqlType: float
+    - Name: revenueSgdFeeLastYear
+      MongoType: float64
+      SqlName: revenueSgdFeeLastYear
+      SqlType: float
+    - Name: revenueSgdFeePrevMonth
+      MongoType: float64
+      SqlName: revenueSgdFeePrevMonth
+      SqlType: float
+    - Name: revenueSgdFeeSum_12m
+      MongoType: float64
+      SqlName: revenueSgdFeeSum_12m
+      SqlType: float
+    - Name: revenueSgdLastYear
+      MongoType: float64
+      SqlName: revenueSgdLastYear
+      SqlType: float
+    - Name: revenueSgdNonFee
+      MongoType: float64
+      SqlName: revenueSgdNonFee
+      SqlType: float
+    - Name: revenueSgdNonFeeLastYear
+      MongoType: float64
+      SqlName: revenueSgdNonFeeLastYear
+      SqlType: float
+    - Name: revenueSgdNonFeePrevMonth
+      MongoType: float64
+      SqlName: revenueSgdNonFeePrevMonth
+      SqlType: float
+    - Name: revenueSgdNonFeeSum_12m
+      MongoType: float64
+      SqlName: revenueSgdNonFeeSum_12m
+      SqlType: float
+    - Name: revenueSgdPrevMonth
+      MongoType: float64
+      SqlName: revenueSgdPrevMonth
+      SqlType: float
+    - Name: revenueSgdSum_12m
+      MongoType: float64
+      SqlName: revenueSgdSum_12m
+      SqlType: float
+    - Name: rwaSgdCap
+      MongoType: float64
+      SqlName: rwaSgdCap
+      SqlType: float
+    - Name: rwaSgdCapAvg_12m
+      MongoType: float64
+      SqlName: rwaSgdCapAvg_12m
+      SqlType: float
+    - Name: rwaSgdCapPrevMonth
+      MongoType: float64
+      SqlName: rwaSgdCapPrevMonth
+      SqlType: float
+    - Name: securedExpSgd
+      MongoType: bson.Decimal128
+      SqlName: securedExpSgd
+      SqlType: decimal
+    - Name: securedExpSgdPrevMonth
+      MongoType: bson.Decimal128
+      SqlName: securedExpSgdPrevMonth
+      SqlType: decimal
+    - Name: segmentdesc
+      MongoType: string
+      SqlName: segmentdesc
+      SqlType: varchar
+    - Name: segmentEaMaSgd
+      MongoType: float64
+      SqlName: segmentEaMaSgd
+      SqlType: float
+    - Name: segmentEclLimitActivatedRatio
+      MongoType: float64
+      SqlName: segmentEclLimitActivatedRatio
+      SqlType: float
+    - Name: segmentEclLimitCntRatio
+      MongoType: float64
+      SqlName: segmentEclLimitCntRatio
+      SqlType: float
+    - Name: segmentEclSgd
+      MongoType: float64
+      SqlName: segmentEclSgd
+      SqlType: float
+    - Name: segmentExposureLimitActivatedRatio
+      MongoType: float64
+      SqlName: segmentExposureLimitActivatedRatio
+      SqlType: float
+    - Name: segmentExposureLimitCntRatio
+      MongoType: float64
+      SqlName: segmentExposureLimitCntRatio
+      SqlType: float
+    - Name: segmentExposureSgd
+      MongoType: float64
+      SqlName: segmentExposureSgd
+      SqlType: float
+    - Name: segmentLimitActivatedSgd
+      MongoType: float64
+      SqlName: segmentLimitActivatedSgd
+      SqlType: float
+    - Name: segmentLimitsCnt
+      MongoType: int64
+      SqlName: segmentLimitsCnt
+      SqlType: int
+    - Name: segmentRar_12mcSgd
+      MongoType: float64
+      SqlName: segmentRar_12mcSgd
+      SqlType: float
+    - Name: segmentResidualMaturity
+      MongoType: float64
+      SqlName: segmentResidualMaturity
+      SqlType: float
+    - Name: segmentRevenueSgdFeeSum_12m
+      MongoType: float64
+      SqlName: segmentRevenueSgdFeeSum_12m
+      SqlType: float
+    - Name: segmentRevenueSgdNonFeeSum_12m
+      MongoType: float64
+      SqlName: segmentRevenueSgdNonFeeSum_12m
+      SqlType: float
+    - Name: segmentRevenueSgdSum_12m
+      MongoType: float64
+      SqlName: segmentRevenueSgdSum_12m
+      SqlType: float
+    - Name: segmentRevenueSgdSum_12mLimitActivatedRatio
+      MongoType: float64
+      SqlName: segmentRevenueSgdSum_12mLimitActivatedRatio
+      SqlType: float
+    - Name: segmentRevenueSgdSum_12mLimitCntRatio
+      MongoType: float64
+      SqlName: segmentRevenueSgdSum_12mLimitCntRatio
+      SqlType: float
+    - Name: segmentRoe
+      MongoType: float64
+      SqlName: segmentRoe
+      SqlType: float
+    - Name: spBalSgd
+      MongoType: float64
+      SqlName: spBalSgd
+      SqlType: float
+    - Name: spBalSgdPrevMonth
+      MongoType: float64
+      SqlName: spBalSgdPrevMonth
+      SqlType: float
+    - Name: spChargeAnnualMth
+      MongoType: int
+      SqlName: spChargeAnnualMth
+      SqlType: int
+    - Name: uncommittedLimitSgd
+      MongoType: float64
+      SqlName: uncommittedLimitSgd
+      SqlType: float
+    - Name: uncommittedLimitSgdPrevMonth
+      MongoType: float64
+      SqlName: uncommittedLimitSgdPrevMonth
+      SqlType: float
+    - Name: uncommittedOutstandingSgd
+      MongoType: float64
+      SqlName: uncommittedOutstandingSgd
+      SqlType: float
+    - Name: uncommittedOutstandingSgdPrevMonth
+      MongoType: float64
+      SqlName: uncommittedOutstandingSgdPrevMonth
+      SqlType: float
+    - Name: unsecuredExpSgd
+      MongoType: bson.Decimal128
+      SqlName: unsecuredExpSgd
+      SqlType: decimal
+    - Name: unsecuredExpSgdPrevMonth
+      MongoType: bson.Decimal128
+      SqlName: unsecuredExpSgdPrevMonth
+      SqlType: decimal
+    - Name: watchlistStatus
+      MongoType: string
+      SqlName: watchlistStatus
+      SqlType: varchar
+    - Name: watchlistStatusPrevMonth
+      MongoType: string
+      SqlName: watchlistStatusPrevMonth
+      SqlType: varchar
+  - table: crctRiskReturnSummary_6m
+    collection: crctRiskReturnSummary_6m
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: acrr
+      MongoType: string
+      SqlName: acrr
+      SqlType: varchar
+    - Name: acrrPrevMonth
+      MongoType: string
+      SqlName: acrrPrevMonth
+      SqlType: varchar
+    - Name: avgAssetBalSgd
+      MongoType: float64
+      SqlName: avgAssetBalSgd
+      SqlType: float
+    - Name: avgAssetBalSgdPrevMonth
+      MongoType: float64
+      SqlName: avgAssetBalSgdPrevMonth
+      SqlType: float
+    - Name: businessDt
+      MongoType: date
+      SqlName: businessDt
+      SqlType: timestamp
+    - Name: committedLimitSgd
+      MongoType: float64
+      SqlName: committedLimitSgd
+      SqlType: float
+    - Name: committedLimitSgdPrevMonth
+      MongoType: float64
+      SqlName: committedLimitSgdPrevMonth
+      SqlType: float
+    - Name: country
+      MongoType: string
+      SqlName: country
+      SqlType: varchar
+    - Name: countryEaMaSgd
+      MongoType: float64
+      SqlName: countryEaMaSgd
+      SqlType: float
+    - Name: countryEclLimitActivatedRatio
+      MongoType: float64
+      SqlName: countryEclLimitActivatedRatio
+      SqlType: float
+    - Name: countryEclLimitCntRatio
+      MongoType: float64
+      SqlName: countryEclLimitCntRatio
+      SqlType: float
+    - Name: countryEclSgd
+      MongoType: float64
+      SqlName: countryEclSgd
+      SqlType: float
+    - Name: countryExposureLimitActivatedRatio
+      MongoType: float64
+      SqlName: countryExposureLimitActivatedRatio
+      SqlType: float
+    - Name: countryExposureLimitCntRatio
+      MongoType: float64
+      SqlName: countryExposureLimitCntRatio
+      SqlType: float
+    - Name: countryExposureSgd
+      MongoType: float64
+      SqlName: countryExposureSgd
+      SqlType: float
+    - Name: countryLimitActivatedSgd
+      MongoType: float64
+      SqlName: countryLimitActivatedSgd
+      SqlType: float
+    - Name: countryLimitsCnt
+      MongoType: int64
+      SqlName: countryLimitsCnt
+      SqlType: int
+    - Name: countryRar_12mcSgd
+      MongoType: float64
+      SqlName: countryRar_12mcSgd
+      SqlType: float
+    - Name: countryResidualMaturity
+      MongoType: float64
+      SqlName: countryResidualMaturity
+      SqlType: float
+    - Name: countryRevenueSgdFeeSum_12m
+      MongoType: float64
+      SqlName: countryRevenueSgdFeeSum_12m
+      SqlType: float
+    - Name: countryRevenueSgdNonFeeSum_12m
+      MongoType: float64
+      SqlName: countryRevenueSgdNonFeeSum_12m
+      SqlType: float
+    - Name: countryRevenueSgdSum_12m
+      MongoType: float64
+      SqlName: countryRevenueSgdSum_12m
+      SqlType: float
+    - Name: countryRevenueSgdSum_12mLimitActivatedRatio
+      MongoType: float64
+      SqlName: countryRevenueSgdSum_12mLimitActivatedRatio
+      SqlType: float
+    - Name: countryRevenueSgdSum_12mLimitCntRatio
+      MongoType: float64
+      SqlName: countryRevenueSgdSum_12mLimitCntRatio
+      SqlType: float
+    - Name: countryRoe
+      MongoType: float64
+      SqlName: countryRoe
+      SqlType: float
+    - Name: eadSgd
+      MongoType: float64
+      SqlName: eadSgd
+      SqlType: float
+    - Name: eadSgdPrevMonth
+      MongoType: float64
+      SqlName: eadSgdPrevMonth
+      SqlType: float
+    - Name: eaMaSgd
+      MongoType: float64
+      SqlName: eaMaSgd
+      SqlType: float
+    - Name: eaMaSgdPrevMonth
+      MongoType: float64
+      SqlName: eaMaSgdPrevMonth
+      SqlType: float
+    - Name: eclSgd
+      MongoType: float64
+      SqlName: eclSgd
+      SqlType: float
+    - Name: eclSgdLastYear
+      MongoType: float64
+      SqlName: eclSgdLastYear
+      SqlType: float
+    - Name: eclSgdPrevMonth
+      MongoType: float64
+      SqlName: eclSgdPrevMonth
+      SqlType: float
+    - Name: exposureSgd
+      MongoType: float64
+      SqlName: exposureSgd
+      SqlType: float
+    - Name: exposureSgdAvg_12m
+      MongoType: float64
+      SqlName: exposureSgdAvg_12m
+      SqlType: float
+    - Name: exposureSgdLastYear
+      MongoType: float64
+      SqlName: exposureSgdLastYear
+      SqlType: float
+    - Name: exposureSgdPrevMonth
+      MongoType: float64
+      SqlName: exposureSgdPrevMonth
+      SqlType: float
+    - Name: gcin
+      MongoType: string
+      SqlName: gcin
+      SqlType: varchar
+    - Name: gicindustry
+      MongoType: string
+      SqlName: gicindustry
+      SqlType: varchar
+    - Name: gicsubindustry
+      MongoType: string
+      SqlName: gicsubindustry
+      SqlType: varchar
+    - Name: grossSpCharge
+      MongoType: float64
+      SqlName: grossSpCharge
+      SqlType: float
+    - Name: grossSpChargeLastYear
+      MongoType: float64
+      SqlName: grossSpChargeLastYear
+      SqlType: float
+    - Name: grossSpChargePrevMonth
+      MongoType: float64
+      SqlName: grossSpChargePrevMonth
+      SqlType: float
+    - Name: industryEaMaSgd
+      MongoType: float64
+      SqlName: industryEaMaSgd
+      SqlType: float
+    - Name: industryEclLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryEclLimitActivatedRatio
+      SqlType: float
+    - Name: industryEclLimitActivatedRatioRank
+      MongoType: int
+      SqlName: industryEclLimitActivatedRatioRank
+      SqlType: int
+    - Name: industryEclLimitCntRatio
+      MongoType: float64
+      SqlName: industryEclLimitCntRatio
+      SqlType: float
+    - Name: industryEclLimitCntRatioRank
+      MongoType: int
+      SqlName: industryEclLimitCntRatioRank
+      SqlType: int
+    - Name: industryEclSgd
+      MongoType: float64
+      SqlName: industryEclSgd
+      SqlType: float
+    - Name: industryExposureLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryExposureLimitActivatedRatio
+      SqlType: float
+    - Name: industryExposureLimitActivatedRatioRank
+      MongoType: int
+      SqlName: industryExposureLimitActivatedRatioRank
+      SqlType: int
+    - Name: industryExposureLimitCntRatio
+      MongoType: float64
+      SqlName: industryExposureLimitCntRatio
+      SqlType: float
+    - Name: industryExposureLimitCntRatioRank
+      MongoType: int
+      SqlName: industryExposureLimitCntRatioRank
+      SqlType: int
+    - Name: industryExposureSgd
+      MongoType: float64
+      SqlName: industryExposureSgd
+      SqlType: float
+    - Name: industryExposureSgdRank
+      MongoType: int
+      SqlName: industryExposureSgdRank
+      SqlType: int
+    - Name: industryGroupEaMaSgd
+      MongoType: float64
+      SqlName: industryGroupEaMaSgd
+      SqlType: float
+    - Name: industryGroupEclLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryGroupEclLimitActivatedRatio
+      SqlType: float
+    - Name: industryGroupEclLimitActivatedRatioRank
+      MongoType: string
+      SqlName: industryGroupEclLimitActivatedRatioRank
+      SqlType: varchar
+    - Name: industryGroupEclLimitCntRatio
+      MongoType: float64
+      SqlName: industryGroupEclLimitCntRatio
+      SqlType: float
+    - Name: industryGroupEclLimitCntRatioRank
+      MongoType: string
+      SqlName: industryGroupEclLimitCntRatioRank
+      SqlType: varchar
+    - Name: industryGroupEclSgd
+      MongoType: float64
+      SqlName: industryGroupEclSgd
+      SqlType: float
+    - Name: industryGroupExposureLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryGroupExposureLimitActivatedRatio
+      SqlType: float
+    - Name: industryGroupExposureLimitActivatedRatioRank
+      MongoType: string
+      SqlName: industryGroupExposureLimitActivatedRatioRank
+      SqlType: varchar
+    - Name: industryGroupExposureLimitCntRatio
+      MongoType: float64
+      SqlName: industryGroupExposureLimitCntRatio
+      SqlType: float
+    - Name: industryGroupExposureLimitCntRatioRank
+      MongoType: string
+      SqlName: industryGroupExposureLimitCntRatioRank
+      SqlType: varchar
+    - Name: industryGroupExposureSgd
+      MongoType: float64
+      SqlName: industryGroupExposureSgd
+      SqlType: float
+    - Name: industryGroupExposureSgdRank
+      MongoType: string
+      SqlName: industryGroupExposureSgdRank
+      SqlType: varchar
+    - Name: industryGroupLimitActivatedSgd
+      MongoType: float64
+      SqlName: industryGroupLimitActivatedSgd
+      SqlType: float
+    - Name: industryGroupLimitsCnt
+      MongoType: string
+      SqlName: industryGroupLimitsCnt
+      SqlType: varchar
+    - Name: industryGroupRar_12mcSgd
+      MongoType: float64
+      SqlName: industryGroupRar_12mcSgd
+      SqlType: float
+    - Name: industryGroupResidualMaturity
+      MongoType: float64
+      SqlName: industryGroupResidualMaturity
+      SqlType: float
+    - Name: industryGroupRevenueFlagSum_12m
+      MongoType: string
+      SqlName: industryGroupRevenueFlagSum_12m
+      SqlType: varchar
+    - Name: industryGroupRevenueSgdFeeSum_12m
+      MongoType: float64
+      SqlName: industryGroupRevenueSgdFeeSum_12m
+      SqlType: float
+    - Name: industryGroupRevenueSgdNonFeeSum_12m
+      MongoType: float64
+      SqlName: industryGroupRevenueSgdNonFeeSum_12m
+      SqlType: float
+    - Name: industryGroupRevenueSgdSum_12m
+      MongoType: float64
+      SqlName: industryGroupRevenueSgdSum_12m
+      SqlType: float
+    - Name: industryGroupRevenueSgdSum_12mLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryGroupRevenueSgdSum_12mLimitActivatedRatio
+      SqlType: float
+    - Name: industryGroupRevenueSgdSum_12mLimitCntRatio
+      MongoType: float64
+      SqlName: industryGroupRevenueSgdSum_12mLimitCntRatio
+      SqlType: float
+    - Name: industryGroupRevenueSgdSum_12mRank
+      MongoType: string
+      SqlName: industryGroupRevenueSgdSum_12mRank
+      SqlType: varchar
+    - Name: industryGroupRoe
+      MongoType: float64
+      SqlName: industryGroupRoe
+      SqlType: float
+    - Name: industryGroupRoeRank
+      MongoType: string
+      SqlName: industryGroupRoeRank
+      SqlType: varchar
+    - Name: industryLimitActivatedSgd
+      MongoType: float64
+      SqlName: industryLimitActivatedSgd
+      SqlType: float
+    - Name: industryLimitsCnt
+      MongoType: int64
+      SqlName: industryLimitsCnt
+      SqlType: int
+    - Name: industryRar_12mcSgd
+      MongoType: float64
+      SqlName: industryRar_12mcSgd
+      SqlType: float
+    - Name: industryResidualMaturity
+      MongoType: float64
+      SqlName: industryResidualMaturity
+      SqlType: float
+    - Name: industryRevenueFlagSum_12m
+      MongoType: int64
+      SqlName: industryRevenueFlagSum_12m
+      SqlType: int
+    - Name: industryRevenueSgdFeeSum_12m
+      MongoType: float64
+      SqlName: industryRevenueSgdFeeSum_12m
+      SqlType: float
+    - Name: industryRevenueSgdNonFeeSum_12m
+      MongoType: float64
+      SqlName: industryRevenueSgdNonFeeSum_12m
+      SqlType: float
+    - Name: industryRevenueSgdSum_12m
+      MongoType: float64
+      SqlName: industryRevenueSgdSum_12m
+      SqlType: float
+    - Name: industryRevenueSgdSum_12mLimitActivatedRatio
+      MongoType: float64
+      SqlName: industryRevenueSgdSum_12mLimitActivatedRatio
+      SqlType: float
+    - Name: industryRevenueSgdSum_12mLimitCntRatio
+      MongoType: float64
+      SqlName: industryRevenueSgdSum_12mLimitCntRatio
+      SqlType: float
+    - Name: industryRevenueSgdSum_12mRank
+      MongoType: int
+      SqlName: industryRevenueSgdSum_12mRank
+      SqlType: int
+    - Name: industryRoe
+      MongoType: float64
+      SqlName: industryRoe
+      SqlType: float
+    - Name: industryRoeRank
+      MongoType: int
+      SqlName: industryRoeRank
+      SqlType: int
+    - Name: limitActivatedSgd
+      MongoType: float64
+      SqlName: limitActivatedSgd
+      SqlType: float
+    - Name: limitActivatedSgdPrevMonth
+      MongoType: float64
+      SqlName: limitActivatedSgdPrevMonth
+      SqlType: float
+    - Name: limitsCnt
+      MongoType: string
+      SqlName: limitsCnt
+      SqlType: varchar
+    - Name: limitsCntLastYear
+      MongoType: string
+      SqlName: limitsCntLastYear
+      SqlType: varchar
+    - Name: limitsCntPrevMonth
+      MongoType: string
+      SqlName: limitsCntPrevMonth
+      SqlType: varchar
+    - Name: netSpCharge
+      MongoType: float64
+      SqlName: netSpCharge
+      SqlType: float
+    - Name: netSpChargeLastYear
+      MongoType: float64
+      SqlName: netSpChargeLastYear
+      SqlType: float
+    - Name: netSpChargePrevMonth
+      MongoType: float64
+      SqlName: netSpChargePrevMonth
+      SqlType: float
+    - Name: niiSgd
+      MongoType: float64
+      SqlName: niiSgd
+      SqlType: float
+    - Name: niiSgdPrevMonth
+      MongoType: float64
+      SqlName: niiSgdPrevMonth
+      SqlType: float
+    - Name: outstandingSgd
+      MongoType: float64
+      SqlName: outstandingSgd
+      SqlType: float
+    - Name: outstandingSgdPrevMonth
+      MongoType: float64
+      SqlName: outstandingSgdPrevMonth
+      SqlType: float
+    - Name: rar_12mcSgd
+      MongoType: float64
+      SqlName: rar_12mcSgd
+      SqlType: float
+    - Name: rar_12mcSgdPrevMonth
+      MongoType: float64
+      SqlName: rar_12mcSgdPrevMonth
+      SqlType: float
+    - Name: residualMaturity
+      MongoType: float64
+      SqlName: residualMaturity
+      SqlType: float
+    - Name: residualMaturityPrevMonth
+      MongoType: float64
+      SqlName: residualMaturityPrevMonth
+      SqlType: float
+    - Name: revenueFlagSum_12m
+      MongoType: int64
+      SqlName: revenueFlagSum_12m
+      SqlType: int
+    - Name: revenueSgd
+      MongoType: float64
+      SqlName: revenueSgd
+      SqlType: float
+    - Name: revenueSgdFee
+      MongoType: float64
+      SqlName: revenueSgdFee
+      SqlType: float
+    - Name: revenueSgdFeeLastYear
+      MongoType: float64
+      SqlName: revenueSgdFeeLastYear
+      SqlType: float
+    - Name: revenueSgdFeePrevMonth
+      MongoType: float64
+      SqlName: revenueSgdFeePrevMonth
+      SqlType: float
+    - Name: revenueSgdFeeSum_12m
+      MongoType: float64
+      SqlName: revenueSgdFeeSum_12m
+      SqlType: float
+    - Name: revenueSgdLastYear
+      MongoType: float64
+      SqlName: revenueSgdLastYear
+      SqlType: float
+    - Name: revenueSgdNonFee
+      MongoType: float64
+      SqlName: revenueSgdNonFee
+      SqlType: float
+    - Name: revenueSgdNonFeeLastYear
+      MongoType: float64
+      SqlName: revenueSgdNonFeeLastYear
+      SqlType: float
+    - Name: revenueSgdNonFeePrevMonth
+      MongoType: float64
+      SqlName: revenueSgdNonFeePrevMonth
+      SqlType: float
+    - Name: revenueSgdNonFeeSum_12m
+      MongoType: float64
+      SqlName: revenueSgdNonFeeSum_12m
+      SqlType: float
+    - Name: revenueSgdPrevMonth
+      MongoType: float64
+      SqlName: revenueSgdPrevMonth
+      SqlType: float
+    - Name: revenueSgdSum_12m
+      MongoType: float64
+      SqlName: revenueSgdSum_12m
+      SqlType: float
+    - Name: rwaSgdCap
+      MongoType: float64
+      SqlName: rwaSgdCap
+      SqlType: float
+    - Name: rwaSgdCapAvg_12m
+      MongoType: float64
+      SqlName: rwaSgdCapAvg_12m
+      SqlType: float
+    - Name: rwaSgdCapPrevMonth
+      MongoType: float64
+      SqlName: rwaSgdCapPrevMonth
+      SqlType: float
+    - Name: securedExpSgd
+      MongoType: bson.Decimal128
+      SqlName: securedExpSgd
+      SqlType: decimal
+    - Name: securedExpSgdPrevMonth
+      MongoType: bson.Decimal128
+      SqlName: securedExpSgdPrevMonth
+      SqlType: decimal
+    - Name: segmentdesc
+      MongoType: string
+      SqlName: segmentdesc
+      SqlType: varchar
+    - Name: segmentEaMaSgd
+      MongoType: float64
+      SqlName: segmentEaMaSgd
+      SqlType: float
+    - Name: segmentEclLimitActivatedRatio
+      MongoType: float64
+      SqlName: segmentEclLimitActivatedRatio
+      SqlType: float
+    - Name: segmentEclLimitCntRatio
+      MongoType: float64
+      SqlName: segmentEclLimitCntRatio
+      SqlType: float
+    - Name: segmentEclSgd
+      MongoType: float64
+      SqlName: segmentEclSgd
+      SqlType: float
+    - Name: segmentExposureLimitActivatedRatio
+      MongoType: float64
+      SqlName: segmentExposureLimitActivatedRatio
+      SqlType: float
+    - Name: segmentExposureLimitCntRatio
+      MongoType: float64
+      SqlName: segmentExposureLimitCntRatio
+      SqlType: float
+    - Name: segmentExposureSgd
+      MongoType: float64
+      SqlName: segmentExposureSgd
+      SqlType: float
+    - Name: segmentLimitActivatedSgd
+      MongoType: float64
+      SqlName: segmentLimitActivatedSgd
+      SqlType: float
+    - Name: segmentLimitsCnt
+      MongoType: int64
+      SqlName: segmentLimitsCnt
+      SqlType: int
+    - Name: segmentRar_12mcSgd
+      MongoType: float64
+      SqlName: segmentRar_12mcSgd
+      SqlType: float
+    - Name: segmentResidualMaturity
+      MongoType: float64
+      SqlName: segmentResidualMaturity
+      SqlType: float
+    - Name: segmentRevenueSgdFeeSum_12m
+      MongoType: float64
+      SqlName: segmentRevenueSgdFeeSum_12m
+      SqlType: float
+    - Name: segmentRevenueSgdNonFeeSum_12m
+      MongoType: float64
+      SqlName: segmentRevenueSgdNonFeeSum_12m
+      SqlType: float
+    - Name: segmentRevenueSgdSum_12m
+      MongoType: float64
+      SqlName: segmentRevenueSgdSum_12m
+      SqlType: float
+    - Name: segmentRevenueSgdSum_12mLimitActivatedRatio
+      MongoType: float64
+      SqlName: segmentRevenueSgdSum_12mLimitActivatedRatio
+      SqlType: float
+    - Name: segmentRevenueSgdSum_12mLimitCntRatio
+      MongoType: float64
+      SqlName: segmentRevenueSgdSum_12mLimitCntRatio
+      SqlType: float
+    - Name: segmentRoe
+      MongoType: float64
+      SqlName: segmentRoe
+      SqlType: float
+    - Name: spBalSgd
+      MongoType: float64
+      SqlName: spBalSgd
+      SqlType: float
+    - Name: spBalSgdPrevMonth
+      MongoType: float64
+      SqlName: spBalSgdPrevMonth
+      SqlType: float
+    - Name: spChargeAnnualMth
+      MongoType: int
+      SqlName: spChargeAnnualMth
+      SqlType: int
+    - Name: uncommittedLimitSgd
+      MongoType: float64
+      SqlName: uncommittedLimitSgd
+      SqlType: float
+    - Name: uncommittedLimitSgdPrevMonth
+      MongoType: float64
+      SqlName: uncommittedLimitSgdPrevMonth
+      SqlType: float
+    - Name: uncommittedOutstandingSgd
+      MongoType: float64
+      SqlName: uncommittedOutstandingSgd
+      SqlType: float
+    - Name: uncommittedOutstandingSgdPrevMonth
+      MongoType: float64
+      SqlName: uncommittedOutstandingSgdPrevMonth
+      SqlType: float
+    - Name: unsecuredExpSgd
+      MongoType: bson.Decimal128
+      SqlName: unsecuredExpSgd
+      SqlType: decimal
+    - Name: unsecuredExpSgdPrevMonth
+      MongoType: bson.Decimal128
+      SqlName: unsecuredExpSgdPrevMonth
+      SqlType: decimal
+    - Name: watchlistStatus
+      MongoType: string
+      SqlName: watchlistStatus
+      SqlType: varchar
+    - Name: watchlistStatusPrevMonth
+      MongoType: string
+      SqlName: watchlistStatusPrevMonth
+      SqlType: varchar
+  - table: currencyFx
+    collection: currencyFx
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: budgetFx
+      MongoType: float64
+      SqlName: budgetFx
+      SqlType: float
+    - Name: businessdate
+      MongoType: date
+      SqlName: businessdate
+      SqlType: timestamp
+    - Name: fromCcy
+      MongoType: string
+      SqlName: fromCcy
+      SqlType: varchar
+    - Name: notionalFx
+      MongoType: float64
+      SqlName: notionalFx
+      SqlType: float
+    - Name: toCcy
+      MongoType: string
+      SqlName: toCcy
+      SqlType: varchar
+  - table: primaryAdaMevSecIndicator
+    collection: primaryAdaMevSecIndicator
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: businessdate
+      MongoType: string
+      SqlName: businessdate
+      SqlType: varchar
+    - Name: ceicCurrRate
+      MongoType: string
+      SqlName: ceicCurrRate
+      SqlType: varchar
+    - Name: ceicCurrSignal
+      MongoType: string
+      SqlName: ceicCurrSignal
+      SqlType: varchar
+    - Name: ceicSignalRule
+      MongoType: string
+      SqlName: ceicSignalRule
+      SqlType: varchar
+    - Name: currUnit
+      MongoType: string
+      SqlName: currUnit
+      SqlType: varchar
+    - Name: dataDate
+      MongoType: string
+      SqlName: dataDate
+      SqlType: varchar
+    - Name: indicator
+      MongoType: string
+      SqlName: indicator
+      SqlType: varchar
+    - Name: location
+      MongoType: string
+      SqlName: location
+      SqlType: varchar
+    - Name: metaDataId
+      MongoType: string
+      SqlName: metaDataId
+      SqlType: varchar
+    - Name: name
+      MongoType: string
+      SqlName: name
+      SqlType: varchar
+    - Name: riskIndicator
+      MongoType: string
+      SqlName: riskIndicator
+      SqlType: varchar
+    - Name: section
+      MongoType: string
+      SqlName: section
+      SqlType: varchar
+    - Name: sectionName
+      MongoType: string
+      SqlName: sectionName
+      SqlType: varchar
+    - Name: threshold
+      MongoType: string
+      SqlName: threshold
+      SqlType: varchar
+    - Name: type
+      MongoType: string
+      SqlName: type
+      SqlType: varchar
+  - table: primaryAdaMevSecIndicatorNew
+    collection: primaryAdaMevSecIndicatorNew
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: businessdate
+      MongoType: string
+      SqlName: businessdate
+      SqlType: varchar
+    - Name: ceicCurrRate
+      MongoType: string
+      SqlName: ceicCurrRate
+      SqlType: varchar
+    - Name: ceicCurrSignal
+      MongoType: string
+      SqlName: ceicCurrSignal
+      SqlType: varchar
+    - Name: ceicSignalRule
+      MongoType: string
+      SqlName: ceicSignalRule
+      SqlType: varchar
+    - Name: currUnit
+      MongoType: string
+      SqlName: currUnit
+      SqlType: varchar
+    - Name: dataDate
+      MongoType: string
+      SqlName: dataDate
+      SqlType: varchar
+    - Name: indicator
+      MongoType: string
+      SqlName: indicator
+      SqlType: varchar
+    - Name: location
+      MongoType: string
+      SqlName: location
+      SqlType: varchar
+    - Name: metaDataId
+      MongoType: string
+      SqlName: metaDataId
+      SqlType: varchar
+    - Name: name
+      MongoType: string
+      SqlName: name
+      SqlType: varchar
+    - Name: riskIndicator
+      MongoType: string
+      SqlName: riskIndicator
+      SqlType: varchar
+    - Name: section
+      MongoType: string
+      SqlName: section
+      SqlType: varchar
+    - Name: sectionName
+      MongoType: string
+      SqlName: sectionName
+      SqlType: varchar
+    - Name: threshold
+      MongoType: string
+      SqlName: threshold
+      SqlType: varchar
+    - Name: type
+      MongoType: string
+      SqlName: type
+      SqlType: varchar
+  - table: primaryAdaPdAcrrIndustry
+    collection: primaryAdaPdAcrrIndustry
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: businessDt
+      MongoType: string
+      SqlName: businessDt
+      SqlType: varchar
+    - Name: gicsubindustry
+      MongoType: string
+      SqlName: gicsubindustry
+      SqlType: varchar
+    - Name: weightedAcrrPd
+      MongoType: string
+      SqlName: weightedAcrrPd
+      SqlType: varchar
+    - Name: weightedAcrrPpd
+      MongoType: string
+      SqlName: weightedAcrrPpd
+      SqlType: varchar
+    - Name: weightedAvgPd
+      MongoType: float64
+      SqlName: weightedAvgPd
+      SqlType: float
+    - Name: weightedAvgPpd
+      MongoType: float64
+      SqlName: weightedAvgPpd
+      SqlType: float
+    - Name: weightedPd
+      MongoType: float64
+      SqlName: weightedPd
+      SqlType: float
+    - Name: weightedPpd
+      MongoType: float64
+      SqlName: weightedPpd
+      SqlType: float
+  - table: primaryAdaPdAcrrIndustryGroup
+    collection: primaryAdaPdAcrrIndustryGroup
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: businessDt
+      MongoType: string
+      SqlName: businessDt
+      SqlType: varchar
+    - Name: gicindustry
+      MongoType: string
+      SqlName: gicindustry
+      SqlType: varchar
+    - Name: weightedAcrrPd
+      MongoType: string
+      SqlName: weightedAcrrPd
+      SqlType: varchar
+    - Name: weightedAcrrPpd
+      MongoType: string
+      SqlName: weightedAcrrPpd
+      SqlType: varchar
+    - Name: weightedAvgPd
+      MongoType: float64
+      SqlName: weightedAvgPd
+      SqlType: float
+    - Name: weightedAvgPpd
+      MongoType: float64
+      SqlName: weightedAvgPpd
+      SqlType: float
+    - Name: weightedPd
+      MongoType: float64
+      SqlName: weightedPd
+      SqlType: float
+    - Name: weightedPpd
+      MongoType: float64
+      SqlName: weightedPpd
+      SqlType: float
+  - table: primaryAdaRiskCtptyBase
+    collection: primaryAdaRiskCtptyBase
+    pipeline: []
+    columns:
+    - Name: _id
+      MongoType: bson.ObjectId
+      SqlName: _id
+      SqlType: objectid
+    - Name: acrr
+      MongoType: string
+      SqlName: acrr
+      SqlType: varchar
+    - Name: acrrPd
+      MongoType: string
+      SqlName: acrrPd
+      SqlType: varchar
+    - Name: alertActionDt
+      MongoType: string
+      SqlName: alertActionDt
+      SqlType: varchar
+    - Name: alertIsValid
+      MongoType: string
+      SqlName: alertIsValid
+      SqlType: varchar
+    - Name: alertPickupDt
+      MongoType: string
+      SqlName: alertPickupDt
+      SqlType: varchar
+    - Name: alertTriggerDt
+      MongoType: string
+      SqlName: alertTriggerDt
+      SqlType: varchar
+    - Name: borrCountInd
+      MongoType: string
+      SqlName: borrCountInd
+      SqlType: varchar
+    - Name: businessDt
+      MongoType: string
+      SqlName: businessDt
+      SqlType: varchar
+    - Name: clientProfileSegment
+      MongoType: string
+      SqlName: clientProfileSegment
+      SqlType: varchar
+    - Name: clientProfileSegmentDesc
+      MongoType: string
+      SqlName: clientProfileSegmentDesc
+      SqlType: varchar
+    - Name: countryOfIncorporation
+      MongoType: string
+      SqlName: countryOfIncorporation
+      SqlType: varchar
+    - Name: customerOwner
+      MongoType: string
+      SqlName: customerOwner
+      SqlType: varchar
+    - Name: doaInd
+      MongoType: string
+      SqlName: doaInd
+      SqlType: varchar
+    - Name: egInd
+      MongoType: string
+      SqlName: egInd
+      SqlType: varchar
+    - Name: gcin
+      MongoType: string
+      SqlName: gcin
+      SqlType: varchar
+    - Name: gcinName
+      MongoType: string
+      SqlName: gcinName
+      SqlType: varchar
+    - Name: gicindustry
+      MongoType: string
+      SqlName: gicindustry
+      SqlType: varchar
+    - Name: gicsubindustry
+      MongoType: string
+      SqlName: gicsubindustry
+      SqlType: varchar
+    - Name: globalIndustry
+      MongoType: string
+      SqlName: globalIndustry
+      SqlType: varchar
+    - Name: newWatchlist
+      MongoType: string
+      SqlName: newWatchlist
+      SqlType: varchar
+    - Name: nonBankLleInd
+      MongoType: int
+      SqlName: nonBankLleInd
+      SqlType: int
+    - Name: ratingScale
+      MongoType: string
+      SqlName: ratingScale
+      SqlType: varchar
+    - Name: segmentdesc
+      MongoType: string
+      SqlName: segmentdesc
+      SqlType: varchar
+    - Name: watchlistStatus
+      MongoType: string
+      SqlName: watchlistStatus
+      SqlType: varchar
